@@ -1,0 +1,13 @@
+@use "../vars";
+
+#logo {
+  width: 256px;
+  height: 256px;
+  background-color: vars.$brandColor;
+  border-radius: 50%;
+}
+
+#subtitle {
+  width: 60%;
+  text-align: center;
+}

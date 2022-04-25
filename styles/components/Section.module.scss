@@ -1,0 +1,11 @@
+@use "../vars";
+
+.section {
+  padding-top: calc(vars.$unit * 2);
+  height: 80vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

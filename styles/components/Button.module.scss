@@ -1,0 +1,24 @@
+@use "../vars.scss";
+
+%button {
+  padding: vars.$unit calc(vars.$unit * 2);
+  border-radius: calc(vars.$unit * 2);
+  border: none;
+  background-color: vars.$secondaryColor;
+}
+
+.base {
+  @extend %button;
+}
+.cta {
+  @extend %button;
+  background-color: vars.$brandColor;
+  color: #fff;
+}
+
+.large {
+  padding: calc(vars.$unit * 1.75) calc(vars.$unit * 2.5);
+  border-radius: calc(vars.$unit * 3);
+  font-size: large;
+  font-weight: bold;
+}

@@ -1,0 +1,20 @@
+@use "../vars";
+
+#footer {
+  width: 100%;
+  padding: vars.$unit;
+  -webkit-box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.35);
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+
+  & a {
+    color: vars.$brandColor;
+  }
+  & * {
+    display: inline;
+  }
+}
