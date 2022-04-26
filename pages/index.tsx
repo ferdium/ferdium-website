@@ -2,18 +2,18 @@ import Layout from "components/Layout";
 import Section from "components/Section";
 import type { NextPage } from "next";
 import styles from "styles/pages/Home.module.scss";
+import logo from "assets/logo.png";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
     <Layout>
       <Section>
-        <div id={styles.logo} />
+        <div>
+          <Image id={styles.logo} src={logo} alt='' width={320} height={320} />
+        </div>
         <h1>Ferdium</h1>
-        <h2 id={styles.subtitle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a libero ante.
-          Suspendisse rutrum vel ipsum vel vulputate. Morbi euismod malesuada libero a ornare.
-          Aenean commodo scelerisque congue.{" "}
-        </h2>
+        <h2 id={styles.subtitle}>Collect all your services in one place.</h2>
       </Section>
     </Layout>
   );

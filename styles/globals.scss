@@ -1,4 +1,4 @@
-@use "vars";
+@use "vars.module.scss";
 html,
 body {
   padding: 0;
@@ -24,4 +24,5 @@ a {
 
 h1 {
   font-size: 3rem;
+  margin: 1rem 0;
 }

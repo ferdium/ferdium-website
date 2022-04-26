@@ -1,10 +1,11 @@
-@use "../vars";
+@use "../vars.module.scss";
 #header {
   display: flex;
   padding: vars.$unit;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35);
+  background-color: vars.$secondaryColor;
 }
 
 #nav {
@@ -16,12 +17,7 @@
 
 #logo {
   border-radius: 50%;
-  height: 64px;
-  width: 64px;
+  height: 46px;
+  width: 46px;
   background-color: vars.$brandColor;
-
-  // temp for draft
-  text-align: center;
-  line-height: 64px;
-  font-weight: bold;
 }

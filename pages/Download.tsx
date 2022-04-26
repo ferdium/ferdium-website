@@ -1,6 +1,5 @@
 import Button from "components/Button";
 import Layout from "components/Layout";
-import Link from "components/Link";
 import Section from "components/Section";
 import React from "react";
 
@@ -11,14 +10,9 @@ const Download = (props: Props) => {
     <Layout>
       <Section>
         <h1>Download</h1>
-        <a
-          href='https://github.com/ferdium/ferdi/releases'
-          target='_blank'
-          rel='noopener noreferrer'>
-          <Button cta size='large'>
-            Download
-          </Button>
-        </a>
+        <Button cta size='large'>
+          Download
+        </Button>
       </Section>
     </Layout>
   );
