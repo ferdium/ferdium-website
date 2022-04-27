@@ -1,0 +1,52 @@
+@use "../vars.module.scss";
+
+#wrapper {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: calc(100vh - 74px);
+  overflow: hidden;
+}
+#background {
+  background-color: vars.$brandColor;
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+  height: 100vh;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(10, 64px);
+  grid-row: 64px;
+  column-gap: 40px;
+  row-gap: 15px;
+  overflow: hidden;
+}
+
+.square {
+  background: #fff;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  opacity: 0.2;
+  max-height: 64px;
+}
+
+// Tried fancy operators, gave up.
+.square-0,
+.square-9 {
+  margin-top: -80px;
+}
+.square-1,
+.square-8 {
+  margin-top: -60px;
+}
+.square-2,
+.square-7 {
+  margin-top: -40px;
+}
+.square-3,
+.square-6 {
+  margin-top: -20px;
+}

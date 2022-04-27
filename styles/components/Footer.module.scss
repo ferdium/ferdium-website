@@ -1,6 +1,7 @@
 @use "../vars.module.scss";
 
 #footer {
+  z-index: 1;
   width: 100%;
   padding: vars.$unit;
   -webkit-box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.75);
