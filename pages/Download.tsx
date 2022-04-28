@@ -10,9 +10,11 @@ const Download = (props: Props) => {
     <Layout>
       <Section>
         <h1>Download</h1>
-        <Button cta size='large'>
-          Download
-        </Button>
+        <a href='https://ferdium.org/download' target='_blank' rel='noreferrer noopener'>
+          <Button cta size='large'>
+            Download
+          </Button>
+        </a>
       </Section>
     </Layout>
   );
