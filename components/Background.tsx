@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "styles/components/Background.module.scss";
 
 type Props = {};
 
 const Background = (props: Props) => {
+  const [nrOfSquares, setNrOfSquares] = useState(90);
+  useEffect(() => {
+    setNrOfSquares((window.innerHeight / 64) * 10);
+  }, []);
+  console.log(nrOfSquares);
   return (
     <div id={styles.wrapper}>
       <div id={styles.background}>
         <div id={styles.grid}>
-          {Array(90)
+          {Array(Math.ceil(nrOfSquares))
             .fill(1)
             .map((item, index) => (
-              <div className={styles.square + " " + styles[`square-${index % 10}`]} key={index} />
+              <div
+                className={`${styles.square} ${styles[`square-${index % 10}`]} ${
+                  styles[`fade-${Math.trunc(Math.random() * 10)}`]
+                }`}
+                key={index}
+              />
             ))}
         </div>
       </div>

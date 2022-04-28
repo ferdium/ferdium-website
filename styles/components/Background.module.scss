@@ -1,14 +1,15 @@
 @use "../vars.module.scss";
 
 #wrapper {
+  top: 0;
   position: absolute;
   z-index: 0;
   width: 100%;
-  height: calc(100vh - 74px);
+  height: calc(100vh - 80px);
   overflow: hidden;
 }
 #background {
-  background-color: vars.$brandColor;
+  background: linear-gradient(#724ed4, #7065ee);
   display: flex;
   justify-content: center;
   opacity: 0.8;
@@ -49,4 +50,18 @@
 .square-3,
 .square-6 {
   margin-top: -20px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@for $i from 2 through 10 {
+  .fade-#{$i} {
+    animation: fade #{$i}s ease-in-out 0s infinite alternate;
+  }
 }

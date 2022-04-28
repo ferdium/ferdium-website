@@ -20,3 +20,8 @@
     display: inline;
   }
 }
+@media (prefers-color-scheme: dark) {
+  #footer {
+    background-color: vars.$secondaryColorDark;
+  }
+}

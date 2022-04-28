@@ -2,10 +2,5 @@ $brandColor: #7452d4;
 $primaryColor: #eeedff;
 $secondaryColor: #f9f6fe;
 $unit: 12px;
-
-:export {
-  brandColor: $brandColor;
-  primaryColor: $primaryColor;
-  secondaryColor: $secondaryColor;
-  unit: $unit;
-}
+$primaryColorDark: #1e1e1e;
+$secondaryColorDark: #323233;
