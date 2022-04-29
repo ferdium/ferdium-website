@@ -10,11 +10,12 @@
   margin-top: auto;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: vars.$secondaryColor;
 
   & a {
-    color: vars.$brandColor;
+    color: #7367f0;
   }
   & * {
     display: inline;

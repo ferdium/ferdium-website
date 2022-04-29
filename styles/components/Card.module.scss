@@ -33,3 +33,25 @@
     box-shadow: 5px 5px 15px 1px #151515;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .card {
+    flex-direction: column;
+    height: calc(vars.$unit * 32);
+    width: calc(vars.$unit * 22);
+    justify-content: center;
+    & > * {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .icon {
+    border-right: none;
+    border-bottom: 1px solid #acacac;
+    padding: calc(vars.$unit * 2) 0;
+  }
+  .content {
+    padding-left: 0;
+    padding-top: calc(vars.$unit * 2);
+  }
+}
