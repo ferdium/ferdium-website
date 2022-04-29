@@ -3,16 +3,18 @@ import Section from "components/Section";
 import type { NextPage } from "next";
 import styles from "styles/pages/Home.module.scss";
 import Image from "next/image";
-import General from "assets/General.png";
-import Work from "assets/Workspaces.png";
+import General from "assets/General.jpg";
+import Work from "assets/Workspaces.jpg";
 import Hero from "components/Hero";
 import CardGrid from "components/CardGrid";
 import Button from "components/Button";
 import Link from "components/Link";
+import Head from "components/Head";
 
 const Home: NextPage = () => {
   return (
     <Layout>
+      <Head />
       <Hero />
       <Section>
         <div>

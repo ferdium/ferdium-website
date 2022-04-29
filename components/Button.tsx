@@ -7,6 +7,7 @@ type Props = {
   size?: string;
   onClick?: MouseEventHandler;
   icon?: boolean;
+  ["aria-label"]?: string;
 };
 
 const Button = (props: Props) => {
@@ -19,7 +20,7 @@ const Button = (props: Props) => {
     className += ` ${styles.icon}`;
   }
   return (
-    <button className={className} onClick={props.onClick}>
+    <button className={className} onClick={props.onClick} aria-label={props["aria-label"]}>
       {props.children}
     </button>
   );

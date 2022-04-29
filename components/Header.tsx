@@ -11,7 +11,7 @@ const Header = (props: Props) => {
   return (
     <header id={styles.header}>
       <nav id={styles.nav}>
-        <Link href='/'>
+        <Link href='/' aria-label='Home link'>
           <div>
             <Image id={styles.logo} src={logo} alt='' width={46} height={46} />
           </div>

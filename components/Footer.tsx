@@ -26,10 +26,18 @@ const Footer = (props: Props) => {
   return (
     <footer id={styles.footer}>
       <div className={styles.links}>
-        <a href='https://github.com/ferdium/ferdium-app' target='_blank' rel='noreferrer noopener'>
+        <a
+          href='https://github.com/ferdium/ferdium-app'
+          target='_blank'
+          rel='noreferrer noopener'
+          aria-label='GitHub link'>
           <Icon size={1} icon={mdiGithub} />
         </a>
-        <a href='https://twitter.com/ferdiumteam' target='_blank' rel='noreferrer noopener'>
+        <a
+          href='https://twitter.com/ferdiumteam'
+          target='_blank'
+          rel='noreferrer noopener'
+          aria-label='Twitter link'>
           <Icon size={1} icon={mdiTwitter} />
         </a>
       </div>
@@ -43,7 +51,8 @@ const Footer = (props: Props) => {
           onClick={() =>
             switchTheme(!(document.documentElement.getAttribute("data-theme") === "dark"))
           }
-          icon>
+          icon
+          aria-label='Switch theme'>
           <Icon size={1} icon={mdiThemeLightDark} />
         </Button>
       </div>
