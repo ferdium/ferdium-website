@@ -33,11 +33,12 @@ const Footer = (props: Props) => {
           <Icon size={1} icon={mdiTwitter} />
         </a>
       </div>
-      <div>
-        <Link href='/TermsOfService'>Terms of Service</Link>&nbsp;&&nbsp;
+      <div className={styles.legal}>
+        <Link href='/TermsOfService'>Terms of Service</Link>
+        <div>&nbsp;&&nbsp;</div>
         <Link href='/PrivacyPolicy'>Privacy Policy</Link>
       </div>
-      <div>
+      <div className={styles.darkmode}>
         <Button
           onClick={() =>
             switchTheme(!(document.documentElement.getAttribute("data-theme") === "dark"))

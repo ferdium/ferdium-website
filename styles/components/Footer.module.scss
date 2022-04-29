@@ -17,15 +17,44 @@
   & a {
     color: #7367f0;
   }
+  & > * {
+    &:first-child {
+      width: 20%;
+    }
+    &:last-child {
+      width: 20%;
+    }
+    width: 100%;
+  }
 }
+
 .links {
   display: flex;
   & > * {
     margin-right: vars.$unit;
   }
 }
+.legal {
+  & > * {
+    display: inline;
+  }
+  display: flex;
+  justify-content: center;
+}
+.darkmode {
+  display: flex;
+  flex-direction: row-reverse;
+}
 [data-theme="dark"] {
   #footer {
     background-color: vars.$secondaryColorDark;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .legal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
