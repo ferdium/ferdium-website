@@ -6,9 +6,8 @@ type Props = {};
 const Background = (props: Props) => {
   const [nrOfSquares, setNrOfSquares] = useState(90);
   useEffect(() => {
-    setNrOfSquares((window.innerHeight / 64) * 10);
+    setNrOfSquares((window.innerHeight / 64) * 10 + 20);
   }, []);
-  console.log(nrOfSquares);
   return (
     <div id={styles.wrapper}>
       <div id={styles.background}>

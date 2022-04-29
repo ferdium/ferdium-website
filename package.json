@@ -10,6 +10,8 @@
     "compile:sass": "sass --watch scss:assets/css"
   },
   "dependencies": {
+    "@mdi/js": "^6.6.96",
+    "@mdi/react": "^1.6.0",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0"

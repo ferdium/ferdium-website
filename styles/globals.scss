@@ -20,14 +20,15 @@ body {
     display: flex;
     flex-direction: column;
   }
+}
+
+[data-theme="dark"] {
+  * {
+    color: #fff;
+  }
   html,
   body {
     background-color: vars.$primaryColorDark;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  * {
-    color: #fff;
   }
 }
 a {
@@ -43,4 +44,22 @@ a {
 h1 {
   font-size: 3rem;
   margin: 1rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    margin: 1rem 0;
+  }
+  h2 {
+    margin: 1rem 0;
+  }
 }

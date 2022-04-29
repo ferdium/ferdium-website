@@ -1,15 +1,19 @@
-import React, { ReactNode } from "react";
+import React, { MouseEventHandler, ReactNode } from "react";
 import styles from "styles/components/Button.module.scss";
 
-type Props = { children: ReactNode; cta?: boolean; size?: string };
+type Props = { children: ReactNode; cta?: boolean; size?: string; onClick?: MouseEventHandler };
 
 const Button = (props: Props) => {
   let className = props.cta ? styles.cta : styles.base;
-  console.log(className);
+
   if (props.size) {
     className += ` ${styles[props.size]}`;
   }
-  return <button className={className}>{props.children}</button>;
+  return (
+    <button className={className} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;

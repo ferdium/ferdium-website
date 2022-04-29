@@ -4,15 +4,20 @@
   padding: vars.$unit calc(vars.$unit * 2);
   border-radius: calc(vars.$unit * 2);
   border: none;
-  background-color: vars.$secondaryColor;
+  background: vars.$secondaryColor;
+  cursor: pointer;
 }
-
+[data-theme="dark"] {
+  .base {
+    background: vars.$secondaryColorDark;
+  }
+}
 .base {
   @extend %button;
 }
 .cta {
   @extend %button;
-  background-color: vars.$brandColor;
+  background: vars.$brandColor;
   color: #fff;
 }
 
@@ -21,4 +26,11 @@
   border-radius: calc(vars.$unit * 3);
   font-size: large;
   font-weight: bold;
+}
+.huge {
+  padding: calc(vars.$unit * 2) calc(vars.$unit * 5);
+  border-radius: calc(vars.$unit * 3);
+  font-size: large;
+  font-weight: bold;
+  font-size: 1.5rem;
 }

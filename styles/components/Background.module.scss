@@ -1,15 +1,15 @@
 @use "../vars.module.scss";
 
 #wrapper {
-  top: 0;
+  top: -74px;
   position: absolute;
   z-index: 0;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 80vh;
   overflow: hidden;
 }
 #background {
-  background: linear-gradient(#724ed4, #7065ee);
+  background: linear-gradient(45deg, #ce9ffc, #7367f0);
   display: flex;
   justify-content: center;
   opacity: 0.8;

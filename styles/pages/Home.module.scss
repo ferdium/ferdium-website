@@ -1,16 +1,25 @@
 @use "../vars.module.scss";
 
-#logo {
-  border-radius: 50%;
+.image {
+  max-width: 800px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.description {
+  padding: calc(vars.$unit * 2);
+  padding-right: calc(vars.$unit * 8);
+}
+.description:last-child {
+  padding-right: calc(vars.$unit * 2);
+  padding-left: calc(vars.$unit * 8);
 }
 
-#subtitle {
-  width: 60%;
-  text-align: center;
-}
-#backgroundWrapper {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+@media only screen and (max-width: 800px) {
+  .description {
+    order: -1;
+    padding-right: calc(vars.$unit * 2);
+  }
+  .description:last-child {
+    padding-left: calc(vars.$unit * 2);
+  }
 }
