@@ -6,7 +6,6 @@ import Image from "next/image";
 import General from "assets/General.png";
 import Work from "assets/Workspaces.png";
 import Hero from "components/Hero";
-import Card from "components/Card";
 import CardGrid from "components/CardGrid";
 import Button from "components/Button";
 import Link from "components/Link";
@@ -15,6 +14,11 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Hero />
+      <Section>
+        <div>
+          <h2>The place to work with... </h2>
+        </div>
+      </Section>
       <Section row>
         <div className={styles.description}>
           <h2>Services</h2>
