@@ -1,4 +1,4 @@
-import { mdiGithub, mdiThemeLightDark } from "@mdi/js";
+import { mdiGithub, mdiThemeLightDark, mdiTwitter } from "@mdi/js";
 import React, { useEffect } from "react";
 import styles from "styles/components/Footer.module.scss";
 import Button from "./Button";
@@ -25,13 +25,16 @@ const Footer = (props: Props) => {
 
   return (
     <footer id={styles.footer}>
-      <div>
+      <div className={styles.links}>
         <a href='https://github.com/ferdium/ferdium-app' target='_blank' rel='noreferrer noopener'>
           <Icon size={1} icon={mdiGithub} />
         </a>
+        <a href='https://twitter.com/ferdiumteam' target='_blank' rel='noreferrer noopener'>
+          <Icon size={1} icon={mdiTwitter} />
+        </a>
       </div>
       <div>
-        <Link href='/TermsOfService'>Terms of Service</Link> &nbsp;&&nbsp;
+        <Link href='/TermsOfService'>Terms of Service</Link>&nbsp;&&nbsp;
         <Link href='/PrivacyPolicy'>Privacy Policy</Link>
       </div>
       <div>

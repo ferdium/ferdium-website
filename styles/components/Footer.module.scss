@@ -17,11 +17,13 @@
   & a {
     color: #7367f0;
   }
-  & * {
-    display: inline;
+}
+.links {
+  display: flex;
+  & > * {
+    margin-right: vars.$unit;
   }
 }
-
 [data-theme="dark"] {
   #footer {
     background-color: vars.$secondaryColorDark;
