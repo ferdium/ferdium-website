@@ -1,4 +1,5 @@
 import Button from "components/Button";
+import Head from "components/Head";
 import Layout from "components/Layout";
 import Section from "components/Section";
 import React from "react";
@@ -10,6 +11,7 @@ type Props = {};
 const Download = (props: Props) => {
   return (
     <Layout>
+      <Head title='Ferdium | Download' />
       <Section>
         <h1>Download</h1>
         <p className={styles.copy}>

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap --config sitemap-config.js",
     "start": "next start",
     "lint": "next lint",
     "compile:sass": "sass --watch scss:assets/css"
@@ -22,6 +23,7 @@
     "@types/react-dom": "18.0.2",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
+    "next-sitemap": "^2.5.20",
     "sass": "^1.50.1",
     "typescript": "4.6.3"
   }

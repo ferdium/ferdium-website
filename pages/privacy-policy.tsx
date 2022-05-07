@@ -1,3 +1,4 @@
+import Head from "components/Head";
 import Layout from "components/Layout";
 import Section from "components/Section";
 import React from "react";
@@ -7,6 +8,7 @@ type Props = {};
 const PrivacyPolicy = (props: Props) => {
   return (
     <Layout>
+      <Head title='Ferdium | Privacy Policy' />
       <Section>
         <div>
           <h1>Privacy Policy for Ferdium</h1>

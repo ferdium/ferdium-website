@@ -1,3 +1,4 @@
+import Head from "components/Head";
 import Layout from "components/Layout";
 import Section from "components/Section";
 import React from "react";
@@ -7,6 +8,7 @@ type Props = {};
 const TermsOfService = (props: Props) => {
   return (
     <Layout>
+      <Head title='Ferdium | Terms Of Service' />
       <Section>
         <div>
           <div>

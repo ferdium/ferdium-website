@@ -58,7 +58,7 @@ const Home: NextPage = () => {
         <CardGrid />
       </Section>
       <Section>
-        <Link href='/Download'>
+        <Link href='/downloads'>
           <Button cta size='huge'>
             Get Ferdium
           </Button>
