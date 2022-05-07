@@ -15,7 +15,7 @@ function FAQ({}: Props) {
       <Section brand>
         <h1>Need help?</h1>
         <h2>Find your question below or ask one of our communities</h2>
-        <CommunityLinks />
+        <CommunityLinks services={["discord", "github", "reddit"]} />
       </Section>
       <Section>
         <FAQEntry title="I can't find the menu bar anymore">
@@ -90,9 +90,9 @@ function FAQ({}: Props) {
         </FAQEntry>
         <FAQEntry title='Can I move my data from Ferdi to Ferdium?'>
           <>
-            Yes you can! Follow
+            Yes you can! Follow{" "}
             <ExternalLink href='https://github.com/ferdium/ferdi/blob/main/MIGRATION.md'>
-              This
+              this
             </ExternalLink>{" "}
             guide.
           </>

@@ -20,12 +20,16 @@
 }
 
 .hero {
-  height: 75vh;
+  min-height: 75vh;
   margin-bottom: vars.$unit;
 }
 
 @media only screen and (max-width: 800px) {
   .hero {
-    height: 70vh;
+    min-height: 70vh;
+    margin-top: vars.$unit;
+  }
+  #subtitle {
+    width: 90%;
   }
 }

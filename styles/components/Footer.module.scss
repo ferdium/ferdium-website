@@ -52,9 +52,28 @@
 }
 @media only screen and (max-width: 800px) {
   .legal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+  }
+  .links {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .darkmode {
+    align-items: center;
+    justify-content: center;
+  }
+  #footer {
+    flex-direction: column;
+    & > * {
+      &:first-child {
+        width: 100%;
+      }
+      &:last-child {
+        width: 100%;
+      }
+      width: 100%;
+      margin-bottom: calc(vars.$unit * 2);
+    }
   }
 }

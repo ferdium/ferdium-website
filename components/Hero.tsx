@@ -21,10 +21,10 @@ const Hero = (props: Props) => {
         </div>
         <h1>Ferdium</h1>
         <h2 id={styles.subtitle}>
-          The home for all your services
+          All your services in one place
           <br /> built by the community
         </h2>
-        <CommunityLinks />
+        <CommunityLinks services={["discord", "github", "reddit"]} />
       </Section>
     </>
   );

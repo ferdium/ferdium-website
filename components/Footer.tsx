@@ -1,8 +1,8 @@
-import { mdiGithub, mdiThemeLightDark, mdiTwitter } from "@mdi/js";
+import { mdiThemeLightDark } from "@mdi/js";
 import React, { useEffect } from "react";
 import styles from "styles/components/Footer.module.scss";
 import Button from "./Button";
-import ExternalLink from "./ExternalLink";
+import CommunityLinks from "./CommunityLinks";
 import Icon from "./Icon";
 import Link from "./Link";
 
@@ -27,15 +27,7 @@ const Footer = (props: Props) => {
   return (
     <footer id={styles.footer}>
       <div className={styles.links}>
-        <ExternalLink
-          href='https://github.com/ferdium/ferdium-app'
-          aria-label='GitHub link'
-          neutral>
-          <Icon size={1} icon={mdiGithub} />
-        </ExternalLink>
-        <ExternalLink href='https://twitter.com/ferdiumteam' aria-label='Twitter link' neutral>
-          <Icon size={1} icon={mdiTwitter} />
-        </ExternalLink>
+        <CommunityLinks services={["discord", "github", "reddit", "twitter"]} icons />
       </div>
       <div className={styles.legal}>
         <Link href='/terms-of-service'>Terms of Service</Link>

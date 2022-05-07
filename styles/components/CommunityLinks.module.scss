@@ -2,16 +2,10 @@
 
 .links {
   display: flex;
-  & > *:not(:last-child) {
-    margin-right: vars.$unit;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .links {
-    flex-direction: column !important;
-    & > *:not(:last-child) {
-      margin-right: 0;
-      margin-bottom: vars.$unit;
-    }
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    margin: calc(vars.$unit * 0.5);
   }
 }

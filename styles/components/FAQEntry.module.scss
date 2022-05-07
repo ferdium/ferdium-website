@@ -11,18 +11,21 @@
   &:last-of-type {
     border-radius: 0 0 5px 5px;
   }
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #acacac;
+  }
   & > article {
     padding: vars.$unit;
   }
   &[open] {
-    background-color: darken($color: vars.$secondaryColor, $amount: 2);
+    background-color: darken($color: #fff, $amount: 12);
     & table,
     td {
-      border-color: darken($color: vars.$secondaryColor, $amount: 2) !important;
+      border-color: darken($color: #fff, $amount: 12) !important;
     }
     & th,
     thead {
-      background-color: darken($color: vars.$secondaryColor, $amount: 4) !important;
+      background-color: darken($color: #fff, $amount: 20) !important;
     }
   }
 }
