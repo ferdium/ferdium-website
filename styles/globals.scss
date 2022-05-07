@@ -22,6 +22,10 @@ body {
     flex-direction: column;
   }
 }
+button {
+  font-family: "Atkinson-Hyperlegible-Regular-102", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
 
 [data-theme="dark"] {
   * {
