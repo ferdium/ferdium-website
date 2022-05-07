@@ -9,6 +9,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  & > * {
+    font-size: inherit;
+  }
 }
 [data-theme="dark"] {
   .base {
@@ -34,7 +37,6 @@
 .huge {
   padding: calc(vars.$unit * 2) calc(vars.$unit * 5);
   border-radius: calc(vars.$unit * 3);
-  font-size: large;
   font-weight: bold;
   font-size: 1.5rem;
 }
