@@ -42,9 +42,9 @@ const Footer = (props: Props) => {
         </a>
       </div>
       <div className={styles.legal}>
-        <Link href='/TermsOfService'>Terms of Service</Link>
+        <Link href='/terms-of-service'>Terms of Service</Link>
         <div>&nbsp;&&nbsp;</div>
-        <Link href='/PrivacyPolicy'>Privacy Policy</Link>
+        <Link href='/privacy-policy'>Privacy Policy</Link>
       </div>
       <div className={styles.darkmode}>
         <Button

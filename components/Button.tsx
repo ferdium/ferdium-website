@@ -8,6 +8,7 @@ type Props = {
   onClick?: MouseEventHandler;
   icon?: boolean;
   ["aria-label"]?: string;
+  prefix?: ReactNode | string;
 };
 
 const Button = (props: Props) => {
@@ -21,7 +22,8 @@ const Button = (props: Props) => {
   }
   return (
     <button className={className} onClick={props.onClick} aria-label={props["aria-label"]}>
-      {props.children}
+      {props.prefix ? <div className={styles.prefix}>{props.prefix}</div> : <></>}
+      <div>{props.children}</div>
     </button>
   );
 };

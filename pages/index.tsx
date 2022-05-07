@@ -24,7 +24,10 @@ const Home: NextPage = () => {
       <Section row>
         <div className={styles.description}>
           <h2>Services</h2>
-          <p>Add your favorite services for quick and easy access</p>
+          <p>
+            Add all your services in one place for quick and easy access and never search your tabs
+            or bookmarks again!
+          </p>
         </div>
         <div className={styles.image}>
           <Image
@@ -42,7 +45,10 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.description}>
           <h2>Workspaces</h2>
-          <p>Separate services into workspaces to be quickly accessed at any time</p>
+          <p>
+            Only keep what is relevant in front of you or separate your work and private time by
+            using workspaces!{" "}
+          </p>
         </div>
       </Section>
       <Section>
