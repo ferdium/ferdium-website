@@ -2,7 +2,7 @@
 #header {
   z-index: 1;
   display: flex;
-  padding: vars.$unit;
+  padding: calc(vars.$unit * 0.8) calc(vars.$unit * 1.5);
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35);
