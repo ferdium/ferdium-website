@@ -4,9 +4,8 @@ import Background from "./Background";
 import Section from "./Section";
 import logo from "assets/logo.png";
 import styles from "styles/components/Hero.module.scss";
-import Button from "./Button";
-import Icon from "./Icon";
-import { mdiDiscord, mdiReddit } from "@mdi/js";
+
+import CommunityLinks from "./CommunityLinks";
 
 type Props = {};
 
@@ -16,7 +15,7 @@ const Hero = (props: Props) => {
       <div id={styles.backgroundWrapper}>
         <Background />
       </div>
-      <Section className={styles.hero} noBg>
+      <Section className={styles.hero}>
         <div>
           <Image id={styles.logo} src={logo} alt='' width={256} height={256} />
         </div>
@@ -25,18 +24,7 @@ const Hero = (props: Props) => {
           The home for all your services
           <br /> built by the community
         </h2>
-        <div className={styles.links}>
-          <a href='https://discord.gg/jVv4Qns8pP' target='_blank' rel='noreferrer noopener'>
-            <Button asDiv prefix={<Icon icon={mdiDiscord} size={1} />}>
-              Discord
-            </Button>
-          </a>
-          <a href='https://www.reddit.com/r/ferdium' target='_blank' rel='noreferrer noopener'>
-            <Button asDiv prefix={<Icon icon={mdiReddit} size={1} />}>
-              Reddit
-            </Button>
-          </a>
-        </div>
+        <CommunityLinks />
       </Section>
     </>
   );

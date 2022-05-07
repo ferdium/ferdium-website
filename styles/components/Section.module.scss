@@ -1,17 +1,33 @@
 @use "../vars.module.scss";
 
 .section {
-  width: 80%;
+  width: 100%;
+  position: relative;
   margin: calc(vars.$unit * 2) auto calc(vars.$unit * 10);
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+.brand {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background: vars.$brandColor;
+  z-index: 0;
+}
+.content {
+  width: 80%;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: relative;
   padding: vars.$unit;
+  position: relative;
+  margin: auto;
 }
 @media only screen and (max-width: 800px) {
-  .section {
+  .content {
     flex-direction: column !important;
     margin-bottom: calc(vars.$unit * 2);
     width: 95%;

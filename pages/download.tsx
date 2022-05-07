@@ -1,4 +1,5 @@
 import Button from "components/Button";
+import ExternalLink from "components/ExternalLink";
 import Head from "components/Head";
 import Layout from "components/Layout";
 import Section from "components/Section";
@@ -20,14 +21,11 @@ const Download = (props: Props) => {
           <br />
           Once there click &quot;Assets&quot; and choose the version for your platform!
         </p>
-        <a
-          href='https://github.com/ferdium/ferdium-app/releases'
-          target='_blank'
-          rel='noreferrer noopener'>
+        <ExternalLink href='https://github.com/ferdium/ferdium-app/releases'>
           <Button cta size='huge'>
             Download
           </Button>
-        </a>
+        </ExternalLink>
       </Section>
     </Layout>
   );

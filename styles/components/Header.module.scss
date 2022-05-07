@@ -8,6 +8,16 @@
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35);
   background-color: vars.$secondaryColor;
 }
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    &:not(:last-child) {
+      margin-right: calc(vars.$unit * 2);
+    }
+  }
+}
 
 [data-theme="dark"] {
   #header {

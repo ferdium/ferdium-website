@@ -1,0 +1,17 @@
+@use "../vars.module.scss";
+
+.links {
+  display: flex;
+  & > *:not(:last-child) {
+    margin-right: vars.$unit;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .links {
+    flex-direction: column !important;
+    & > *:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: vars.$unit;
+    }
+  }
+}

@@ -16,12 +16,16 @@ const Header = (props: Props) => {
             <Image id={styles.logo} src={logo} alt='' width={46} height={46} />
           </div>
         </Link>
-
-        <Link href='/download'>
-          <Button cta asDiv size='large'>
-            Get Ferdium
-          </Button>
-        </Link>
+        <div className={styles.links}>
+          <Link href='/faq' neutral>
+            FAQ
+          </Link>
+          <Link href='/download'>
+            <Button cta asDiv size='large'>
+              Get Ferdium
+            </Button>
+          </Link>
+        </div>
       </nav>
     </header>
   );

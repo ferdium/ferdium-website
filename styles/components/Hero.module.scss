@@ -23,12 +23,6 @@
   height: 75vh;
   margin-bottom: vars.$unit;
 }
-.links {
-  display: flex;
-  & > *:not(:last-child) {
-    margin-right: vars.$unit;
-  }
-}
 
 @media only screen and (max-width: 800px) {
   .hero {

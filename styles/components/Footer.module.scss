@@ -14,9 +14,6 @@
   align-items: center;
   background-color: vars.$secondaryColor;
 
-  & a {
-    color: #ce9ffc;
-  }
   & > * {
     &:first-child {
       width: 20%;
@@ -46,6 +43,9 @@
   flex-direction: row-reverse;
 }
 [data-theme="dark"] {
+  .darkmode svg {
+    color: #fff;
+  }
   #footer {
     background-color: vars.$secondaryColorDark;
   }

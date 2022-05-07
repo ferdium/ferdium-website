@@ -2,7 +2,7 @@
 
 %button {
   padding: vars.$unit calc(vars.$unit * 2);
-  border-radius: calc(vars.$unit * 2);
+  border-radius: calc(1rem * 2);
   border: none;
   background: vars.$secondaryColor;
   cursor: pointer;
@@ -40,7 +40,7 @@
   padding: calc(vars.$unit * 2) calc(vars.$unit * 5);
   border-radius: calc(vars.$unit * 3);
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .icon {
