@@ -6,6 +6,7 @@
   margin: calc(vars.$unit * 2) auto calc(vars.$unit * 10);
   &:first-of-type {
     margin-top: 0;
+    margin: 0 auto calc(vars.$unit * 4);
   }
 }
 .brand {
