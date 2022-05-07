@@ -18,7 +18,7 @@ const Header = (props: Props) => {
         </Link>
 
         <Link href='/download'>
-          <Button cta size='large'>
+          <Button cta asDiv size='large'>
             Get Ferdium
           </Button>
         </Link>

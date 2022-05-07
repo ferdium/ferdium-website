@@ -1,6 +1,5 @@
 import React, { MouseEventHandler, ReactNode } from "react";
 import styles from "styles/components/Button.module.scss";
-
 type Props = {
   children: ReactNode;
   cta?: boolean;
@@ -9,6 +8,7 @@ type Props = {
   icon?: boolean;
   ["aria-label"]?: string;
   prefix?: ReactNode | string;
+  asDiv?: boolean;
 };
 
 const Button = (props: Props) => {
@@ -20,10 +20,23 @@ const Button = (props: Props) => {
   if (props.icon) {
     className += ` ${styles.icon}`;
   }
-  return (
-    <button className={className} onClick={props.onClick} aria-label={props["aria-label"]}>
+  const content = (
+    <>
       {props.prefix ? <div className={styles.prefix}>{props.prefix}</div> : <></>}
       <div>{props.children}</div>
+    </>
+  );
+
+  if (props.asDiv) {
+    return (
+      <div className={className} aria-label={props["aria-label"]}>
+        {content}
+      </div>
+    );
+  }
+  return (
+    <button className={className} onClick={props.onClick} aria-label={props["aria-label"]}>
+      {content}
     </button>
   );
 };

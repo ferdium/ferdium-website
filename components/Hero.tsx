@@ -27,10 +27,14 @@ const Hero = (props: Props) => {
         </h2>
         <div className={styles.links}>
           <a href='https://discord.gg/jVv4Qns8pP' target='_blank' rel='noreferrer noopener'>
-            <Button prefix={<Icon icon={mdiDiscord} size={1} />}>Discord</Button>
+            <Button asDiv prefix={<Icon icon={mdiDiscord} size={1} />}>
+              Discord
+            </Button>
           </a>
           <a href='https://www.reddit.com/r/ferdium' target='_blank' rel='noreferrer noopener'>
-            <Button prefix={<Icon icon={mdiReddit} size={1} />}>Reddit</Button>
+            <Button asDiv prefix={<Icon icon={mdiReddit} size={1} />}>
+              Reddit
+            </Button>
           </a>
         </div>
       </Section>

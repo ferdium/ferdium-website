@@ -59,7 +59,7 @@ const Home: NextPage = () => {
       </Section>
       <Section>
         <Link href='/download'>
-          <Button cta size='huge'>
+          <Button cta asDiv size='huge'>
             Get Ferdium
           </Button>
         </Link>
