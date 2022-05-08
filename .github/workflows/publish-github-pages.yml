@@ -14,6 +14,6 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           source-directory: out
-          build-command: yarn build && yarn export
+          build-command: yarn deploy
           deploy-branch: gh-pages
           custom-domain: ferdium.org
