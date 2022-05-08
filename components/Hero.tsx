@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import Background from "./Background";
 import Section from "./Section";
@@ -6,6 +5,7 @@ import logo from "assets/logo.png";
 import styles from "styles/components/Hero.module.scss";
 
 import CommunityLinks from "./CommunityLinks";
+import NonOptimizedImage from "./NonOptimizedImage";
 
 type Props = {};
 
@@ -17,7 +17,7 @@ const Hero = (props: Props) => {
       </div>
       <Section className={styles.hero}>
         <div>
-          <Image id={styles.logo} src={logo} alt='' width={256} height={256} />
+          <NonOptimizedImage id={styles.logo} src={logo} alt='' width={256} height={256} />
         </div>
         <h1>Ferdium</h1>
         <h2 id={styles.subtitle}>
