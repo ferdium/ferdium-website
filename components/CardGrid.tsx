@@ -39,7 +39,8 @@ const CardGrid = (props: Props) => {
         <Card icon={<Icon icon={mdiSunglasses} size={2} color='#7367f0' />}>
           <h3>Anonymous Access</h3>
           <p>
-            Ferdium can be used without an account without hassle and all your data stays with you.
+            Ferdium can be used without an account without hassle and all your Ferdium app data
+            stays with you.
           </p>
         </Card>
       </div>
