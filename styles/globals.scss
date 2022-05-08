@@ -1,0 +1,77 @@
+@use "vars.module.scss";
+@font-face {
+  font-family: "Atkinson-Hyperlegible-Regular-102";
+  src: url("../assets/font/Atkinson-Hyperlegible-Font/Atkinson-Hyperlegible-Regular-102.woff2")
+      format("woff2"),
+    url("../assets/font/Atkinson-Hyperlegible-Font/Atkinson-Hyperlegible-Regular-102.woff2")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Atkinson-Hyperlegible-Regular-102", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: vars.$primaryColor;
+  & > #__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+button {
+  font-family: "Atkinson-Hyperlegible-Regular-102", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+[data-theme="dark"] {
+  html,
+  body {
+    color: #fff;
+    background-color: vars.$primaryColorDark;
+  }
+  a {
+    color: #ce9ffc;
+  }
+}
+a {
+  color: #7367f0;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  h2 {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+}

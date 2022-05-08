@@ -1,0 +1,39 @@
+@use "../vars.module.scss";
+#header {
+  z-index: 1;
+  display: flex;
+  padding: calc(vars.$unit * 0.8) calc(vars.$unit * 1.5);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35);
+  background-color: vars.$secondaryColor;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    &:not(:last-child) {
+      margin-right: calc(vars.$unit * 2);
+    }
+  }
+}
+
+[data-theme="dark"] {
+  #header {
+    background-color: vars.$secondaryColorDark;
+  }
+}
+#nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  border-radius: 50%;
+  height: 46px;
+  width: 46px;
+  background-color: vars.$brandColor;
+}

@@ -1,0 +1,9 @@
+.neutral {
+  color: black;
+}
+
+[data-theme="dark"] {
+  .neutral {
+    color: white;
+  }
+}

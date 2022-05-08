@@ -1,0 +1,48 @@
+@use "../vars.module.scss";
+
+.entry {
+  width: 100%;
+  padding: calc(vars.$unit * 2);
+  background: vars.$secondaryColor;
+  text-align: left;
+  &:first-of-type {
+    border-radius: 5px 5px 0 0;
+  }
+  &:last-of-type {
+    border-radius: 0 0 5px 5px;
+  }
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #acacac;
+  }
+  & > article {
+    padding: vars.$unit;
+  }
+  &[open] {
+    background-color: darken($color: #fff, $amount: 12);
+    & table,
+    td {
+      border-color: darken($color: #fff, $amount: 12) !important;
+    }
+    & th,
+    thead {
+      background-color: darken($color: #fff, $amount: 20) !important;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .entry {
+    background-color: vars.$secondaryColorDark;
+    &[open] {
+      background-color: lighten($color: vars.$secondaryColorDark, $amount: 2);
+      & table,
+      td {
+        border-color: lighten($color: vars.$secondaryColorDark, $amount: 2) !important;
+      }
+      & th,
+      thead {
+        background-color: lighten($color: vars.$secondaryColorDark, $amount: 4) !important;
+      }
+    }
+  }
+}

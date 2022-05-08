@@ -1,0 +1,35 @@
+@use "../vars.module.scss";
+
+#backgroundWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+}
+
+#subtitle {
+  width: 60%;
+  text-align: center;
+  margin-top: 0;
+}
+
+.hero {
+  min-height: 75vh;
+  margin-bottom: vars.$unit;
+}
+
+@media only screen and (max-width: 800px) {
+  .hero {
+    min-height: 70vh;
+    margin-top: vars.$unit;
+  }
+  #subtitle {
+    width: 90%;
+  }
+}

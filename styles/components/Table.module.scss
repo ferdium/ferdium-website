@@ -1,0 +1,25 @@
+@use "../vars.module.scss";
+
+.table {
+  padding: vars.$unit;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.td,
+.th {
+  padding: vars.$unit;
+  border: 1px solid vars.$secondaryColor;
+}
+.thead {
+  background: lighten($color: vars.$secondaryColor, $amount: 0);
+}
+[data-theme="dark"] {
+  .td,
+  .th {
+    border: 1px solid vars.$secondaryColorDark;
+  }
+  .thead {
+    background: lighten($color: vars.$secondaryColorDark, $amount: 2);
+  }
+}

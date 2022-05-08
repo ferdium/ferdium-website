@@ -1,0 +1,57 @@
+@use "../vars.module.scss";
+
+.card {
+  height: calc(vars.$unit * 20);
+  width: calc(vars.$unit * 40);
+  background: vars.$secondaryColor;
+  padding: calc(vars.$unit * 2);
+  margin: calc(vars.$unit * 2);
+  border-radius: 20px;
+  display: flex;
+  -webkit-box-shadow: 5px 5px 15px 1px #9e9e9e;
+  -moz-box-shadow: 5px 5px 15px 1px #9e9e9e;
+  box-shadow: 5px 5px 15px 1px #9e9e9e;
+  & > * {
+    display: flex;
+  }
+}
+.content {
+  flex-direction: column;
+  padding-left: calc(vars.$unit * 2);
+  justify-content: center;
+}
+.icon {
+  padding-right: calc(vars.$unit * 2);
+  border-right: 1px solid #acacac;
+}
+
+[data-theme="dark"] {
+  .card {
+    background: vars.$secondaryColorDark;
+    -webkit-box-shadow: 5px 5px 15px 1px #151515;
+    -moz-box-shadow: 5px 5px 15px 1px #151515;
+    box-shadow: 5px 5px 15px 1px #151515;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .card {
+    flex-direction: column;
+    height: calc(vars.$unit * 32);
+    width: calc(vars.$unit * 22);
+    justify-content: center;
+    & > * {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .icon {
+    border-right: none;
+    border-bottom: 1px solid #acacac;
+    padding: calc(vars.$unit * 2) 0;
+  }
+  .content {
+    padding-left: 0;
+    padding-top: calc(vars.$unit * 2);
+  }
+}

@@ -1,0 +1,11 @@
+@use "../vars.module.scss";
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    margin: calc(vars.$unit * 0.5);
+  }
+}

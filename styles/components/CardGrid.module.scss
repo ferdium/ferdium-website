@@ -1,0 +1,19 @@
+@use "../vars.module.scss";
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardWrapper {
+  width: 50%;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 1800px) {
+  .cardWrapper {
+    width: 33%;
+  }
+}
