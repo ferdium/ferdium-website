@@ -30,7 +30,8 @@ const Download = (props: Props) => {
         </ExternalLink>
       </Section>
       <Section>
-        <h2>CLI installations</h2>
+        <h2>CLI installation</h2>
+        <CodeBlockSection title='Scoop' text='scoop install ferdium-nightly' />
         <CodeBlockSection title='Snap' text='snap install --edge ferdium' />
         <CodeBlockSection title='AUR' text='yay -S ferdium' />
       </Section>
