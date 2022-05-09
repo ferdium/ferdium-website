@@ -11,6 +11,10 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  assetPrefix: './',
+  images: {
+    loader: "custom",
+  },
 };
 
 module.exports = nextConfig;

@@ -2,7 +2,6 @@ import Layout from "components/Layout";
 import Section from "components/Section";
 import type { NextPage } from "next";
 import styles from "styles/pages/Home.module.scss";
-import Image from "next/image";
 import General from "assets/General.jpg";
 import Work from "assets/Workspaces.jpg";
 import Hero from "components/Hero";
@@ -10,6 +9,7 @@ import CardGrid from "components/CardGrid";
 import Button from "components/Button";
 import Link from "components/Link";
 import Head from "components/Head";
+import NonOptimizedImage from "components/NonOptimizedImage";
 
 const Home: NextPage = () => {
   return (
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           </p>
         </div>
         <div className={styles.image}>
-          <Image
+          <NonOptimizedImage
             src={General}
             alt='The Ferdium app displaying web services as icons on a sidebar to the left.'
           />
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
       </Section>
       <Section row>
         <div className={styles.image}>
-          <Image
+          <NonOptimizedImage
             src={Work}
             alt='A drawer menu has opened on the left side of the app revealing the option tho choose between workspaces'
           />

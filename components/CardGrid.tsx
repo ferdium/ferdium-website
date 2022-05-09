@@ -21,7 +21,7 @@ const CardGrid = (props: Props) => {
         <Card icon={<Icon icon={mdiCheckboxMultipleMarked} size={2} color='#7367f0' />}>
           <h3>Todo</h3>
           <p>
-            Ferdium has a built in Todo panel that is accessable at eny time and can be viewed in
+            Ferdium has a built in Todo panel that is available at any time and can be viewed in
             tandem with your other services.
           </p>
         </Card>
