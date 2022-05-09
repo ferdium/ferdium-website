@@ -20,17 +20,17 @@ function FAQ({}: Props) {
       <Section>
         <FAQEntry title="I can't find the menu bar anymore">
           <>
-            Not seeing the menu bar (File, Edit, View, Etc.) might mean that it is hidden and it can
-            be found by pressing &quot;Alt&quot;.
+            Not seeing the menu bar (File, Edit, View, Etc.) might mean that it is hidden, and it
+            can be found by pressing &quot;Alt&quot;.
             <br />
-            If you want to prevent it from auto-hiding again un-tick the option:
+            If you want to prevent it from auto-hiding again, un-tick the option:
             <br /> &quot;View &gt; auto-hide menu bar&quot;
           </>
         </FAQEntry>
         <FAQEntry title="I can't find the service I'm looking for">
           <>
-            The &quot;Custom Website&quot; service allows you add your own website and with the icon
-            of your choosing!
+            The &quot;Custom Website&quot; service allows you to add your own website and with the
+            icon of your choosing!
             <br />
             <br />
             If you want to help the and add your service to the official Ferdium services, you can
@@ -44,7 +44,7 @@ function FAQ({}: Props) {
           <>
             You can host your own server with{" "}
             <ExternalLink href='https://github.com/ferdium/ferdium-server'>
-              Ferdium Server
+              Ferdium Server,
             </ExternalLink>{" "}
             which allows you to create your own account.
           </>
