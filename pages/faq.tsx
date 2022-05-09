@@ -70,18 +70,26 @@ function FAQ({}: Props) {
               <Table.Body>
                 <Table.Row>
                   <Table.Cell>
-                    <ExternalLink href=''>Issue Tracker</ExternalLink>
+                    <ExternalLink href='https://github.com/ferdium/ferdium-app/issues'>
+                      Issue Tracker
+                    </ExternalLink>
                   </Table.Cell>
                   <Table.Cell>
-                    <ExternalLink href=''>Issue Tracker</ExternalLink>
+                    <ExternalLink href='https://github.com/ferdium/ferdium-server/issues'>
+                      Issue Tracker
+                    </ExternalLink>
                   </Table.Cell>
                 </Table.Row>
                 <Table.Row>
                   <Table.Cell>
-                    <ExternalLink href=''>Report</ExternalLink>
+                    <ExternalLink href='https://github.com/ferdium/ferdium-app/issues/new/choose'>
+                      Report
+                    </ExternalLink>
                   </Table.Cell>
                   <Table.Cell>
-                    <ExternalLink href=''>Report</ExternalLink>
+                    <ExternalLink href='https://github.com/ferdium/ferdium-server/issues/new'>
+                      Report
+                    </ExternalLink>
                   </Table.Cell>
                 </Table.Row>
               </Table.Body>
