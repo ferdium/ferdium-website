@@ -1,9 +1,11 @@
 import Button from "components/Button";
+import CodeBlockSection from "components/CodeBlockSection";
 import ExternalLink from "components/ExternalLink";
 import Head from "components/Head";
 import Layout from "components/Layout";
 import Section from "components/Section";
 import React from "react";
+import { CopyBlock, dracula, nord } from "react-code-blocks";
 
 import styles from "styles/pages/Download.module.scss";
 
@@ -21,11 +23,16 @@ const Download = (props: Props) => {
           <br />
           Once there click &quot;Assets&quot; and choose the version for your platform!
         </p>
-        <ExternalLink href='https://github.com/ferdium/ferdium-app/releases'>
+        <ExternalLink href='https://github.com/ferdium/ferdium-app/releases/latest'>
           <Button cta size='huge'>
             Download
           </Button>
         </ExternalLink>
+      </Section>
+      <Section>
+        <h2>CLI installations</h2>
+        <CodeBlockSection title='Snap' text='snap install --edge ferdium' />
+        <CodeBlockSection title='AUR' text='yay -S ferdium' />
       </Section>
     </Layout>
   );
