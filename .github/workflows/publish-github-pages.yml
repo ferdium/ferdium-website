@@ -1,4 +1,4 @@
-name: Github Pages Publish
+name: Custom Github Pages Build
 
 on:
   push:
@@ -16,4 +16,3 @@ jobs:
           source-directory: out
           build-command: yarn deploy
           deploy-branch: gh-pages
-          custom-domain: ferdium.org
