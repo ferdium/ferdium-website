@@ -5,7 +5,6 @@ import Head from "components/Head";
 import Layout from "components/Layout";
 import Section from "components/Section";
 import React from "react";
-import { CopyBlock, dracula, nord } from "react-code-blocks";
 
 import styles from "styles/pages/Download.module.scss";
 

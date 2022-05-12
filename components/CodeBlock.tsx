@@ -35,7 +35,7 @@ const CodeBlock = (props: Props) => {
     if (copied) {
       setTimeout(() => {
         setCopied(false);
-      }, 3000);
+      }, 2000);
     }
   }, [copied]);
 
