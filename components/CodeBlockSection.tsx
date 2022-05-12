@@ -1,5 +1,6 @@
 import React from "react";
 import { CopyBlock, nord } from "react-code-blocks";
+import CodeBlock from "./CodeBlock";
 
 type Props = {
   text: string;
@@ -8,9 +9,9 @@ type Props = {
 
 const CodeBlockSection = (props: Props) => {
   return (
-    <article style={{ width: "400px", marginBottom: "1rem" }}>
+    <article style={{ width: "450px", marginBottom: "1rem" }}>
       <h3>{props.title}</h3>
-      <CopyBlock text={props.text} theme={nord} language='bash' codeBlock showLineNumbers={false} />
+      <CodeBlock code={props.text} />
     </article>
   );
 };
