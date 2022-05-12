@@ -14,5 +14,5 @@ type Props = {
 };
 
 export default function NonOptimizedImage(props: Props) {
-  return <NextImage {...props} loader={customLoader} unoptimized />;
+  return <NextImage {...props} loader={customLoader} unoptimized={!props.width && !props.height} />;
 }
