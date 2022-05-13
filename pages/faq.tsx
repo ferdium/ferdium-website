@@ -105,6 +105,17 @@ function FAQ({}: Props) {
             guide.
           </>
         </FAQEntry>
+        <FAQEntry title='I received a "Ferdium is damaged and can’t be opened. You should move it to the Trash” error message when trying to install Ferdium. What should I do?'>
+          <>
+            This error message is shown because the releases aren't yet signed. We are still working on getting an Apple developer license.
+            <br />
+            Meanwhile, you could check out{" "}
+            <ExternalLink href='https://github.com/ferdium/ferdium-app/issues/34'>
+            this issue
+            </ExternalLink>{" "}
+            to work around it.
+          </>
+        </FAQEntry>
       </Section>
     </Layout>
   );
