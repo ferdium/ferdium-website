@@ -27,7 +27,7 @@ const CodeBlock = (props: Props) => {
         console.log("Text copied to clipboard...");
       })
       .catch((err) => {
-        console.log("Something went wrong", err);
+        console.error("Something went wrong when copying to clipboard", err);
       });
   };
   useEffect(() => {
