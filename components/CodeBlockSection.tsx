@@ -1,5 +1,4 @@
 import React from "react";
-import { CopyBlock, nord } from "react-code-blocks";
 import CodeBlock from "./CodeBlock";
 
 type Props = {
