@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "AaronCheung430",
+      "name": "Aaron Cheung",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21007144?v=4",
+      "profile": "http://aaroncheung430.com",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "website",
+  "projectOwner": "ferdium",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
