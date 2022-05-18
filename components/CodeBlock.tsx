@@ -24,7 +24,6 @@ const CodeBlock = (props: Props) => {
       .writeText(props.code)
       .then(() => {
         setCopied(true);
-        console.log("Text copied to clipboard...");
       })
       .catch((err) => {
         console.error("Something went wrong when copying to clipboard", err);
