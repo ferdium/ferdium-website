@@ -1,22 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Contributing to the Ferdium Website
 
-## Getting Started
+:tada: First off, thanks for taking the time and your effort to make Ferdium better! :tada:
+
+## Table of contents
+
+<!-- TOC depthFrom:2 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Table of contents](#table-of-contents)
+- [Code of Conduct](#code-of-conduct)
+- [How do I contribute?](#how-do-i-contribute)
+	- [Setup your development environment](#setup-your-development-environment)
+		- [Node.js, pnpm](#nodejs-pnpm)
+		- [Git](#git)
+	- [Clone the repository](#clone-the-repository)
+	- [Install dependencies](#install-dependencies)
+	- [Add your modifications](#add-your-modifications)
+	- [Build the website locally](#build-the-website-locally)
+- [Learn More](#learn-more)
+
+<!-- /TOC -->
+
+## Code of Conduct
+
+This project and everyone participating in it is governed by the [Ferdium Code of Conduct](https://raw.githubusercontent.com/ferdium/ferdium-app/develop/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+Please report unacceptable behavior to [hello@ferdium.org](mailto:hello@ferdium.org).
+
+## How do I contribute?
+
+### Setup your development environment
+
+#### Node.js, pnpm
+
+You will need a working installation of Node.js, with the `pnpm` package manager.
+It is advised to use the version recommended in the [`ferdium-app` repository](https://github.com/ferdium/ferdium-app/blob/develop/CONTRIBUTING.md#nodejs-npm-pnpm).
+
+_Note:_ You can choose any version manager to manage multiple versions of `node` and `npm`. For eg, [nvm](https://github.com/nvm-sh/nvm) or [asdf](https://github.com/asdf-vm/asdf).
+
+#### Git
+
+The version [2.23.0](https://git-scm.com/downloads) for Git is working fine for development. You can then use the console from Git to do the development procedure.
+
+### Clone the repository
+
+```bash
+git clone https://github.com/ferdium/website.git
+```
+
+### Install dependencies
+
+Run the following command to install all dependencies for NextJS.
+
+```bash
+pnpm install
+```
+
+### Add your modifications
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the content by modifying `.tsx` files in `pages/` or `components/`. The page auto-updates as you edit the files.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Build the website locally
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Ferdium website is statically generated to be served by GitHub Pages.
+To locally build and export the next website, run the following command. The static output will be generated in `out/`.
+
+```bash
+pnpm run export
+```
 
 ## Learn More
 
@@ -26,9 +83,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -10,7 +10,11 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-> The website source for [Ferdium](https://ferdium.org)
+The website source for the [Ferdium website](https://ferdium.org), built with NextJS.
+
+## Contributing
+
+Please read the [contributing guidelines](CONTRIBUTING.md) to setup your development machine and proceed.
 
 ## Contributors ✨
 
