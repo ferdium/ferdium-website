@@ -37,8 +37,8 @@ const Download = (props: Props) => {
           Some package managers (like AUR) also allow you to build the source release yourself.
         </p>
         <CodeBlockSection
-            title='AUR (Arch linux and derivatives)'
-            text={`yay -S ferdium-bin`}
+            title='AUR (Arch Linux and derivatives)'
+            text={`yay -S ferdium-bin\n// or, to compile yourself\nyay -S ferdium`}
         />
         <CodeBlockSection
           title='Homebrew (macOS)'
