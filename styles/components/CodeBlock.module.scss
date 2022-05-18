@@ -1,0 +1,27 @@
+@use "../vars.module.scss";
+
+.codeblock {
+  background-color: vars.$secondaryColor;
+  padding: vars.$unit;
+  border-radius: vars.$unit;
+  display: flex;
+  justify-content: space-between;
+}
+[data-theme="dark"] {
+  .codeblock {
+    background-color: vars.$secondaryColorDark;
+    & * {
+      color: white;
+    }
+  }
+}
+.code {
+  white-space: pre;
+  margin-right: vars.$unit;
+  line-height: 1.5rem;
+}
+.check {
+  & * {
+    color: green !important;
+  }
+}
