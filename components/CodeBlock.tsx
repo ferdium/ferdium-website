@@ -10,7 +10,6 @@ type Props = { code: string };
 const CodeBlock = (props: Props) => {
   const [copied, setCopied] = useState(false);
   const copy = () => {
-    console.log(window);
     if (!navigator.clipboard) {
       // Clipboard API not available
       const text = document.createElement("textarea");
