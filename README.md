@@ -22,6 +22,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://aaroncheung430.com"><img src="https://avatars.githubusercontent.com/u/21007144?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron Cheung</b></sub></a><br /><a href="https://github.com/ferdium/website/commits?author=AaronCheung430" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Dalgam"><img src="https://avatars.githubusercontent.com/u/7426323?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Philip Olsson</b></sub></a><br /><a href="https://github.com/ferdium/website/commits?author=Dalgam" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/cedricroijakkers"><img src="https://avatars.githubusercontent.com/u/15158042?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cedric Roijakkers</b></sub></a><br /><a href="https://github.com/ferdium/website/commits?author=cedricroijakkers" title="Documentation">📖</a></td>
   </tr>
 </table>
 
