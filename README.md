@@ -9,7 +9,11 @@
 
 # Ferdium Website
 
-> The website source for [Ferdium](https://ferdium.org)
+The website source for the [Ferdium website](https://ferdium.org), built with NextJS.
+
+## Contributing
+
+Please read the [contributing guidelines](CONTRIBUTING.md) to setup your development machine and proceed.
 
 ## Contributors ✨
 
@@ -28,5 +32,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

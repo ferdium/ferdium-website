@@ -1,15 +1,15 @@
 {
   "name": "ferdium-website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap --config sitemap-config.js",
-    "deploy": "next build && next export",
+    "preexport": "next build",
+    "export": "next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "compile:sass": "sass --watch scss:assets/css"
+    "lint": "next lint"
   },
   "dependencies": {
     "@mdi/js": "^6.6.96",
