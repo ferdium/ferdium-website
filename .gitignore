@@ -40,5 +40,8 @@ yarn-error.log*
 !.vscode/extensions.json
 *.code-workspace
 
+# JetBrains IDEs
+.idea
+
 # Local History for Visual Studio Code
 .history/
