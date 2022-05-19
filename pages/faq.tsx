@@ -107,7 +107,7 @@ function FAQ({}: Props) {
         </FAQEntry>
         <FAQEntry title="I can't to open Ferdium after downloading. What should I do?">
           <>
-            This is because the releases aren&apost yet signed. We are still working on getting an Apple developer license and a certificate for Windows.
+            This is because the releases aren&apos;t yet signed. We are still working on getting an Apple developer license and a certificate for Windows.
             <br />
             Meanwhile, you could check out these sections for{" "}
             <ExternalLink href='https://github.com/ferdium/ferdium-app#unsigned-nightlies-on-macos'>
