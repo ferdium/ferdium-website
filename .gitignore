@@ -35,12 +35,13 @@ yarn-error.log*
 *.tsbuildinfo
 
 ### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
+.vscode/
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+
+# JetBrains IDEs
+.idea
 
 # Local History for Visual Studio Code
 .history/

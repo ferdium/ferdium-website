@@ -1,0 +1,42 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "AaronCheung430",
+      "name": "Aaron Cheung",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21007144?v=4",
+      "profile": "http://aaroncheung430.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Dalgam",
+      "name": "Philip Olsson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7426323?v=4",
+      "profile": "https://github.com/Dalgam",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "cedricroijakkers",
+      "name": "Cedric Roijakkers",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15158042?v=4",
+      "profile": "https://github.com/cedricroijakkers",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "website",
+  "projectOwner": "ferdium",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

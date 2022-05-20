@@ -1,4 +1,5 @@
 import Button from "components/Button";
+import CodeBlockSection from "components/CodeBlockSection";
 import ExternalLink from "components/ExternalLink";
 import Head from "components/Head";
 import Layout from "components/Layout";
@@ -17,15 +18,36 @@ const Download = (props: Props) => {
         <h1>Download</h1>
         <p className={styles.copy}>
           We&apos;re in the process of getting direct downloads ready, for now you can follow the
-          link below to download the latest version of Ferdium from our GitHub Releases. <br />
+          link below to download the latest nightly release of Ferdium from our GitHub Releases. <br />
           <br />
-          Once there click &quot;Assets&quot; and choose the version for your platform!
+          Once there click &quot;Assets&quot; and choose the version for your platform! We currently have
+          releases for macOS, Windows, Linux (AppImage and DEB) and FreeBSD.
         </p>
-        <ExternalLink href='https://github.com/ferdium/ferdium-app/releases'>
+        <ExternalLink href='https://github.com/ferdium/ferdium-app/releases/latest'>
           <Button cta size='huge'>
-            Download
+            Download from GitHub
           </Button>
         </ExternalLink>
+      </Section>
+      <Section>
+        <h2>Using your OS&apos;s package manager</h2>
+        <p className={styles.copy}>
+          Alternatively, you can use the package manager of your OS to install Ferdium. Use one of the
+          CLI commands below depending on your OS to install the latest binary release of Ferdium.
+          Some package managers (like AUR) also allow you to build the source release yourself.
+        </p>
+        <CodeBlockSection
+            title='AUR (Arch Linux and derivatives)'
+            text={`yay -S ferdium-bin\n// or, to compile yourself\nyay -S ferdium`}
+        />
+        <CodeBlockSection
+          title='Homebrew (macOS)'
+          text={`brew tap ferdium/ferdium\nbrew install ferdium-nightly`}
+        />
+        <CodeBlockSection title='Scoop (Windows)' text='scoop install ferdium-nightly' />
+        <CodeBlockSection
+            title='Snap (Ubuntu linux and derivatives)'
+            text={`snap install --edge ferdium\nsnap connect ferdium:camera\nsnap connect ferdium:pulseaudio`} />
       </Section>
     </Layout>
   );
