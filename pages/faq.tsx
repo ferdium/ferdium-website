@@ -120,6 +120,16 @@ function FAQ({}: Props) {
             in README.md to work around it.
           </>
         </FAQEntry>
+        <FAQEntry title="My Discord service is not showing properly. What should I do?">
+          <>
+            This is because of the User Agent within the service. Discord thinks you are on a mobile site instead of a desktop site.
+            <br />
+            It can be solved by right-clicking on the discord service that you are using from the sidebar and choosing edit. Scroll down and update the User Agent. A full list of User Agents can be found{" "}
+            <ExternalLink href='https://developers.whatismybrowser.com/useragents/explore/'>
+            here.
+            </ExternalLink>{" "}
+          </>
+        </FAQEntry>
       </Section>
     </Layout>
   );
