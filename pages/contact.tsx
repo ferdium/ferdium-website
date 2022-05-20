@@ -27,8 +27,8 @@ const Contact = (props: Props) => {
             If you have found a bug in the Ferdium application itself, or have an idea for a possible
             improvement, open an issue on the <a href="https://github.com/ferdium/ferdium-app/issues">GitHub
             bug tracker</a>. When doing so, be sure to follow the guidelines in the description of the new
-            issue when creating it. In case of any questions, come and chat in <a href="https://discord.gg/xqA9vTP6">Discord</a>
-            and we&apos;ll gladly help you.
+            issue when creating it. In case of any questions, come and chat in <a href="https://discord.gg/xqA9vTP6">Discord</a> and 
+            we&apos;ll gladly help you.
           </p>
           <p>
             If you wish to participate in the Ferdium project, you are always welcome to join. We can use help
