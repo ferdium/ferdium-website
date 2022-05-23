@@ -40,6 +40,10 @@ const Contact = (props: Props) => {
             <a href='https://github.com/ferdium/ferdium-app/pulls'>pull request on GitHub</a> and we
             will evaluate it.
           </p>
+          <p>
+            You can also contact us at <a href='mailto:contact@ferdium.org'>contact@ferdium.org</a>{" "}
+            for matters related to privacy or that requires direct contact.
+          </p>
         </div>
       </Section>
     </Layout>
