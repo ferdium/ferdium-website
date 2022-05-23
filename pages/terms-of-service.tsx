@@ -456,7 +456,7 @@ const TermsOfService = (props: Props) => {
             Services.
           </p>
           <p>
-            11.8
+            11.8{" "}
             <strong>
               <em>For consumers only </em>
             </strong>
@@ -475,7 +475,7 @@ const TermsOfService = (props: Props) => {
             &nbsp;
           </p>
           <p>
-            11.9
+            11.9{" "}
             <strong>
               <em>For business users only</em>
             </strong>
