@@ -116,7 +116,7 @@ const TermsOfService = (props: Props) => {
           </p>
           <p>
             If you know or suspect that anyone other than you knows your user information (such as
-            an identification code or user name) and/or password you must promptly{" "}
+            an identification code or user name) and/or password, you must promptly{" "}
             <Link href='/contact'>contact</Link> us.
           </p>
           <p>
