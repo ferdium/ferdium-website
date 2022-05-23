@@ -1,5 +1,6 @@
 import Head from "components/Head";
 import Layout from "components/Layout";
+import Link from "components/Link";
 import Section from "components/Section";
 import React from "react";
 
@@ -78,17 +79,17 @@ const TermsOfService = (props: Props) => {
             that all data provided by you is accurate. &nbsp;
           </p>
           <p>
-            <strong>&mdash; </strong>Our Acceptable Use Policy contact@ferdium.org, which sets out
-            the permitted uses and prohibited uses of the Site. When using the Site, you must comply
-            with this Acceptable Use Policy. &nbsp;
+            <strong>&mdash; </strong>Our Acceptable Use Policy, which sets out the permitted uses
+            and prohibited uses of the Site. When using the Site, you must comply with this
+            Acceptable Use Policy. &nbsp;
           </p>
 
           <h3>
             <strong>2. </strong>&nbsp;<strong>Acceptable Use </strong>
           </h3>
           <p>
-            2.1 Our full Acceptable Use Policy contact@ferdium.org, sets out all the permitted uses
-            and prohibited uses of this site. &nbsp;
+            2.1 Our full Acceptable Use Policy, sets out all the permitted uses and prohibited uses
+            of this site. &nbsp;
           </p>
           <p>
             2.2 You may not access or use the Site for any purpose other than that for which we make
@@ -115,8 +116,8 @@ const TermsOfService = (props: Props) => {
           </p>
           <p>
             If you know or suspect that anyone other than you knows your user information (such as
-            an identification code or user name) and/or password you must promptly notify us at
-            contact@ferdium.org.
+            an identification code or user name) and/or password you must promptly{" "}
+            <Link href='/contact'>contact</Link> us.
           </p>
           <p>
             3.2 If you provide any information that is untrue, inaccurate, not current or
@@ -151,7 +152,7 @@ const TermsOfService = (props: Props) => {
           </p>
           <p>
             4.3 In posting User Content, including reviews or making contact with other users of the
-            Site you shall comply with our Acceptable Use Policy contact@ferdium.org. &nbsp;
+            Site you shall comply with our Acceptable Use Policy. &nbsp;
           </p>
           <p>
             4.4 You warrant that any User Content does comply with our Acceptable Use Policy, and
@@ -172,8 +173,8 @@ const TermsOfService = (props: Props) => {
             by other users on the Site do not represent our views or values
           </p>
           <p>
-            4.7 If you wish to complain about User Content uploaded by other users please contact us
-            at contact@ferdium.org or use the take down or report button. &nbsp;&nbsp;&nbsp;
+            4.7 If you wish to complain about User Content uploaded by other users please{" "}
+            <Link href='/contact'>contact</Link> us. &nbsp;&nbsp;&nbsp;
           </p>
 
           <h3>5. Our content</h3>
@@ -378,8 +379,8 @@ const TermsOfService = (props: Props) => {
             10.1 These Terms and Conditions shall remain in full force and effect while you use the
             Site or Services or are otherwise a user of the Site, as applicable. You may terminate
             your use or participation at any time, for any reason, by following the instructions for
-            terminating user accounts in your account settings, if available, or by contacting us at
-            contact@ferdium.org. &nbsp;
+            terminating user accounts in your account settings, if available, or by{" "}
+            <Link href='/contact'>contacting</Link> us. &nbsp;
           </p>
           <p>
             10.2 Without limiting any other provision of these Terms and Conditions, we reserve the
@@ -492,8 +493,8 @@ const TermsOfService = (props: Props) => {
           </p>
           <p>
             11.11 In order to resolve a complaint regarding the Services or to receive further
-            information regarding use of the Services, please contact us by email at
-            contact@ferdium.org
+            information regarding use of the Services, please <Link href='/contact'>contact</Link>
+            us.
           </p>
         </div>
       </Section>
