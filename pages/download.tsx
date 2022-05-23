@@ -16,14 +16,17 @@ const Download = (props: Props) => {
       <Head title='Ferdium | Download' />
       <Section>
         <h1>Download</h1>
-        <p className={styles.copy}>
-          We&apos;re in the process of getting direct downloads ready, for now you can follow the
-          link below to download the latest nightly release of Ferdium from our GitHub Releases.{" "}
-          <br />
-          <br />
-          Once there click &quot;Assets&quot; and choose the version for your platform! We currently
-          have releases for macOS, Windows, Linux (AppImage and DEB) and FreeBSD.
-        </p>
+        <div className={styles.copy}>
+          <p>
+            We&apos;re in the process of getting direct downloads ready, for now you can follow the
+            link below to download the latest nightly release of Ferdium from our GitHub Releases.{" "}
+          </p>
+
+          <p>
+            Once there click &quot;Assets&quot; and choose the version for your platform! We
+            currently have releases for macOS, Windows, Linux (AppImage and DEB) and FreeBSD.
+          </p>
+        </div>
         <ExternalLink href='https://github.com/ferdium/ferdium-app/releases/latest'>
           <Button cta size='huge'>
             Download from GitHub
