@@ -6,7 +6,7 @@
   background: vars.$secondaryColor;
   padding: calc(vars.$unit * 2);
   margin: calc(vars.$unit * 2);
-  border-radius: 20px;
+  border-radius: vars.$borderRadius;
   display: flex;
   -webkit-box-shadow: 5px 5px 15px 1px #9e9e9e;
   -moz-box-shadow: 5px 5px 15px 1px #9e9e9e;

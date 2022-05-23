@@ -6,10 +6,10 @@
   background: vars.$secondaryColor;
   text-align: left;
   &:first-of-type {
-    border-radius: 5px 5px 0 0;
+    border-radius: vars.$borderRadius vars.$borderRadius 0 0;
   }
   &:last-of-type {
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 vars.$borderRadius vars.$borderRadius;
   }
   &:not(:last-of-type) {
     border-bottom: 1px solid #acacac;
