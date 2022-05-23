@@ -15,7 +15,7 @@ const Hero = (props: Props) => {
       <div id={styles.backgroundWrapper}>
         <Background />
       </div>
-      <Section className={styles.hero}>
+      <Section className={styles.hero} wide>
         <div>
           <NonOptimizedImage id={styles.logo} src={logo} alt='' width={256} height={256} />
         </div>

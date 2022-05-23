@@ -17,7 +17,7 @@
   z-index: 0;
 }
 .content {
-  width: 80%;
+  width: 60%;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -26,6 +26,9 @@
   padding: vars.$unit;
   position: relative;
   margin: auto;
+}
+.wide {
+  width: 90%;
 }
 @media only screen and (max-width: 800px) {
   .content {
