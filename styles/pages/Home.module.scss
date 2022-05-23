@@ -2,8 +2,10 @@
 
 .image {
   max-width: 800px;
-  border-radius: 15px;
   overflow: hidden;
+  & > span {
+    border-radius: calc(vars.$borderRadius * 0.5);
+  }
 }
 .description {
   padding: calc(vars.$unit * 2);
