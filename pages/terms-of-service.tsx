@@ -493,7 +493,7 @@ const TermsOfService = (props: Props) => {
           </p>
           <p>
             11.11 In order to resolve a complaint regarding the Services or to receive further
-            information regarding use of the Services, please <Link href='/contact'>contact</Link>
+            information regarding use of the Services, please <Link href='/contact'>contact</Link>{" "}
             us.
           </p>
         </div>
