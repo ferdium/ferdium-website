@@ -105,7 +105,7 @@ function FAQ({}: Props) {
             guide.
           </>
         </FAQEntry>
-        <FAQEntry title="I can't to open Ferdium after downloading. What should I do?">
+        <FAQEntry title="I am unable to open Ferdium after downloading. What should I do?">
           <>
             This is because the releases aren&apos;t yet signed. We are still working on getting an
             Apple developer license and a certificate for Windows.
