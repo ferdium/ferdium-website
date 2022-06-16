@@ -105,9 +105,9 @@ function FAQ({}: Props) {
             guide.
           </>
         </FAQEntry>
-        <FAQEntry title="I am unable to open Ferdium after downloading. What should I do?">
+        <FAQEntry title="I am unable to open Ferdium after downloading the installer. What should I do?">
           <>
-            This is because the releases aren&apos;t yet signed. We are still working on getting an
+            This is because the releases aren&apos;t signed yet. We are still working on getting an
             Apple developer license and a certificate for Windows.
             <br />
             Meanwhile, you could check out these sections for{" "}
@@ -127,7 +127,7 @@ function FAQ({}: Props) {
             site instead of a desktop site.
             <br />
             It can be solved by right-clicking on the discord service that you are using from the
-            sidebar and choosing edit. Scroll down and update the User Agent. A full list of User
+            sidebar and choosing "Edit". Scroll down and update the "User Agent". A full list of User
             Agents can be found{" "}
             <ExternalLink href='https://developers.whatismybrowser.com/useragents/explore/'>
               here.
