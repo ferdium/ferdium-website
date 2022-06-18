@@ -11,7 +11,7 @@ const Head = (props: Props) => {
       <title>{props.title || "Ferdium | The home for all your services"}</title>
       <meta
         name='description'
-        content='Introducing a great productivity tool to keep all messanging, productivity, and online services in one place'></meta>
+        content='Introducing a great productivity tool to keep all messaging, productivity, and online services in one place'></meta>
     </NextHead>
   );
 };
