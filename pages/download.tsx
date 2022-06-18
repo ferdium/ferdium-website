@@ -49,7 +49,10 @@ const Download = (props: Props) => {
           title='Homebrew (macOS)'
           text={`brew tap ferdium/ferdium\nbrew install ferdium-nightly`}
         />
-        <CodeBlockSection title='Scoop (Windows)' text='scoop install ferdium-nightly' />
+        <CodeBlockSection
+          title='Scoop (Windows)'
+          text={`scoop bucket add ferdium https://github.com/ferdium/scoop-ferdium\nscoop install ferdium-nightly`}
+        />
         <CodeBlockSection
           title='Snap (Ubuntu linux and derivatives)'
           text={`snap install --edge ferdium\nsnap connect ferdium:camera\nsnap connect ferdium:audio-record`}
