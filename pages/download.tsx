@@ -51,7 +51,7 @@ const Download = (props: Props) => {
         />
         <CodeBlockSection
           title='Scoop (Windows)'
-          text={`scoop bucket add ferdium https://github.com/ferdium/scoop-ferdium\nscoop install ferdium-nightly`}
+          text={`scoop bucket add versions\nscoop install ferdium-nightly`}
         />
         <CodeBlockSection
           title='Snap (Ubuntu linux and derivatives)'
