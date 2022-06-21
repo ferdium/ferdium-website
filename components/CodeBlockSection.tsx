@@ -8,7 +8,7 @@ type Props = {
 
 const CodeBlockSection = (props: Props) => {
   return (
-    <article style={{ width: "450px", marginBottom: "1rem" }}>
+    <article style={{ width: "500px", marginBottom: "1rem" }}>
       <h3>{props.title}</h3>
       <CodeBlock code={props.text} />
     </article>
