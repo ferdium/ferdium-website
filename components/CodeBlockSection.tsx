@@ -1,6 +1,6 @@
 import React from "react";
 import CodeBlock from "./CodeBlock";
-
+import styles from "styles/components/CodeBlockSection.module.scss";
 type Props = {
   text: string;
   title: string;
@@ -8,7 +8,7 @@ type Props = {
 
 const CodeBlockSection = (props: Props) => {
   return (
-    <article style={{ width: "500px", marginBottom: "1rem" }}>
+    <article className={styles.codeblocksection}>
       <h3>{props.title}</h3>
       <CodeBlock code={props.text} />
     </article>
