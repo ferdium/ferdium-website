@@ -19,6 +19,7 @@
   white-space: pre;
   margin-right: vars.$unit;
   line-height: 1.5rem;
+  overflow-x: scroll;
 }
 .check {
   & * {
