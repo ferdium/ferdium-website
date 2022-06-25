@@ -105,22 +105,6 @@ function FAQ({}: Props) {
             guide.
           </>
         </FAQEntry>
-        <FAQEntry title='I am unable to open Ferdium after downloading the installer. What should I do?'>
-          <>
-            This is because the releases aren&apos;t signed yet. We are still working on getting an
-            Apple developer license and a certificate for Windows.
-            <br />
-            Meanwhile, you could check out these sections for{" "}
-            <ExternalLink href='https://github.com/ferdium/ferdium-app#unsigned-nightlies-on-macos'>
-              MacOS
-            </ExternalLink>{" "}
-            and{" "}
-            <ExternalLink href='https://github.com/ferdium/ferdium-app#unsigned-nightlies-on-windows'>
-              Windows
-            </ExternalLink>{" "}
-            in README.md to work around it.
-          </>
-        </FAQEntry>
         <FAQEntry title='My Discord service is not showing properly. What should I do?'>
           <>
             This is because of the User Agent within the service. Discord thinks you are on a mobile
