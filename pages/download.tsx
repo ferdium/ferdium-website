@@ -46,6 +46,10 @@ const Download = (props: Props) => {
           text={`yay -S ferdium-bin\n// or, to compile yourself\nyay -S ferdium`}
         />
         <CodeBlockSection
+          title='Flatpack'
+          text={`flatpak install flathub org.ferdium.Ferdium`}
+        />
+        <CodeBlockSection
           title='Homebrew (macOS)'
           text={`brew tap ferdium/ferdium\nbrew install ferdium-nightly`}
         />
