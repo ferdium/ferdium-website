@@ -5,7 +5,6 @@ import Layout from "components/Layout";
 import Section from "components/Section";
 import Table from "components/Table";
 import React from "react";
-import styles from "styles/pages/faq.module.scss";
 
 type Props = {};
 
@@ -46,14 +45,26 @@ function FAQ({}: Props) {
             <ExternalLink href='https://github.com/ferdium/ferdium-server'>
               Ferdium Server,
             </ExternalLink>{" "}
-            which allows you to create your own account.
+            which allows you to create your own account. If you chose the accountless option when signing
+            up in Ferdium for the first time, you can follow{" "}
+            <ExternalLink href='https://github.com/ferdium/ferdium-app/blob/develop/INTERNAL_SERVER.md#exporting-backups'>
+              these steps
+            </ExternalLink>{" "}
+            to create backups manually.
           </>
         </FAQEntry>
-        <FAQEntry title='Can I report a bug?'>
+        <FAQEntry title="I want to switch from a Franz/Ferdi/Ferdium account to the accountless option">
           <>
-            Yes!
-            <br />
-            <br />
+            This is a great idea since it looks like you don&apos;t want your data to be stored on someone
+            else&apos;s cloud. It also means that you can be shielded from any outages (both voluntary and
+            involuntary) of the server in question. All you will need to do is to take a backup of your settings
+            from your current server (answered in the above faq), and then logout in Ferdium, and choose the
+            appropriate button in the login page. Once you get into the accountless option, you can follow
+            the similar instructions as above to import your configurations, services and workspaces.
+          </>
+        </FAQEntry>
+        <FAQEntry title='Where can I report a bug?'>
+          <>
             First, see if your problem has already been reported by searching for it in our Issue
             Tracker.
             <br />
