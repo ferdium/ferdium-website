@@ -43,7 +43,7 @@ The version [2.23.0](https://git-scm.com/downloads) for Git is working fine for 
 ### Clone the repository
 
 ```bash
-git clone https://github.com/ferdium/website.git
+git clone https://github.com/ferdium/ferdium-website.git
 ```
 
 ### Install dependencies
