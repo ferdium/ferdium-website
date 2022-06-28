@@ -17,6 +17,90 @@ function FAQ({}: Props) {
         <CommunityLinks services={["discord", "github", "reddit"]} />
       </Section>
       <Section>
+        <FAQEntry title="My computer warns me when I try to install Ferdium">
+            <>
+              Even though Ferdium code is signed through the appropriate certificates,
+              some warnings may still appear.
+              <details>
+                <summary>On MacOS:</summary>
+                Any app that has been downloaded from internet will give you a warning
+                asking you to confirm its opening. You can read on that popup that the app
+                has been checked for malware by Apple which did not find any. This means
+                that the software has been submitted to Apple as part of the build process
+                to be notarized. You can thus safely ignore this warning and open the app.
+              </details>
+              <br/>
+              <details>
+                <summary>On Windows:</summary>
+                You might see the Windows SmartScreen appear, telling you that &quot;Windows
+                protected your PC&quot; by preventing an unrecognised app from starting. You
+                have the option to click on &quot;More Info&quot; which will display the app name
+                as well as the publisher name. Verify that the app is indeed &quot;Ferdium&quot;
+                and that Publisher corresponds to &quot;Ambroise Grau&quot; (more details below).
+                You can then safely click on &quot;Run anyway&quot; and use the app. If you inadvertently
+                clicked on &quot;Don&apos;t run&quot;, you won&apos;t be presented with SmartScreen
+                another time. You can however right-click on the executable to go into the file&apos;s
+                properties and tick the &quot;Unblock&quot; box at the bottom of the window, which will
+                allow its execution by double-click once again.
+              </details>
+            </>
+        </FAQEntry>
+        <FAQEntry title="Why do I see the name &quot;Ambroise Grau&quot; as publisher instead of &quot;Ferdium&quot;?">
+          <>
+            Since Ferdium is not recognised as a legal entity, it is not possible to obtain
+            certificates under the organisation&apos;s name. For this reason, the certificates
+            to sign releases for both MacOS and Windows have been taken under the personal name
+            of one of the project maintainers, namely &quot;Ambroise Grau&quot;. This is the
+            name that should appear when verifying the certificate or the publisher name of the
+            software.
+          </>
+        </FAQEntry>
+        <FAQEntry title="Which asset should I download?">
+          <>
+            <details>
+              <summary>For MacOS:</summary>
+              You first need to know if you are using a computer running one of the intel chip or
+              one of the more recent arm chip (developed only by Apple and called M1 or M2). If you
+              do not know it, check the value in `Menu-&gt;About this Mac`. If you have an arm chip
+              you need to look for the assets that contain `arm64` in their name.
+              There are then two choices: the first one is to download the appropriate file finishing
+              with `-mac.zip` which will unzip to give you the application directly; while the second
+              choice is to get the `.dmg` which will mount and allow you to drag the application into
+              your `Applications` folder. Both options are valid (though using the dmg is recommended)
+              as long as you make sure to take the asset corresponding to your processor.
+            </details>
+            <br/>
+            <details>
+              <summary>For Windows:</summary>
+              There are 3 types of assets that can be downloaded to get Ferdium on Windows:
+              <ol>
+                <li>The automatic installer (recommended): the asset named `Ferdium-Setup-6.x.x-*.exe`.
+                  After launching the executable, this will install Ferdium and all its configuration
+                  into the AppData\Local folder without prompt.</li>
+                <li>The msi installer: named `Ferdium-6.x.x-*.msi`, this installer allows for a few
+                  additional options when installing the app compared to the automatic installer. If
+                  you are still running on a 32bit system, you need to choose the one that contains
+                  `ia32` in its name.</li>
+                <li>The portable version: corresponds to the asset named `Ferdium-6.x.x-*.exe`.
+                  This is a standalone application that will create the configuration folder in the
+                  folder where the executable lies instead of storing it into AppData.</li>
+              </ol>
+            </details>
+            <br/>
+            <details>
+              <summary>For Linux:</summary>
+              The `Ferdium-6.x.x-*.AppImage` is a binary that can be executed immediately and that
+              does not necessitate any installation. Alongside this, there are multiple package files
+              for different types of Linux distributions, such as `.freebsd`, `.rpm` and `.deb` (the
+              latter having multiple available architecture). All of these configure their local
+              configuration into the home folder.
+            </details>
+            <br/>
+            For any developer that wants to build from source, the code is also directly available for
+            each release the app can be built simply by running the appropriate scripts found in the
+            `script` folder (assuming that the environment has been set up correctly).
+          </>
+        </FAQEntry>
         <FAQEntry title="I can't find the menu bar anymore">
           <>
             Not seeing the menu bar (File, Edit, View, Etc.) might mean that it is hidden, and it

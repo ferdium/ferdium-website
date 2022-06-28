@@ -5,6 +5,7 @@ import Head from "components/Head";
 import Layout from "components/Layout";
 import Section from "components/Section";
 import React from "react";
+import Link from "components/Link";
 
 import styles from "styles/pages/Download.module.scss";
 
@@ -23,8 +24,9 @@ const Download = (props: Props) => {
           </p>
 
           <p>
-            Once there click &quot;Assets&quot; and choose the version for your platform! We
-            currently have releases for macOS, Windows, Linux (AppImage and DEB) and FreeBSD.
+            Once there click &quot;Assets&quot; and choose the version for your platform (check the
+            <Link href='/faq'> FAQ </Link> if you are unsure which one to get)! We currently have
+            releases for macOS, Windows, Linux (AppImage and DEB) and FreeBSD.
           </p>
         </div>
         <ExternalLink href='https://github.com/ferdium/ferdium-app/releases/latest'>
