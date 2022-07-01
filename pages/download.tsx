@@ -60,6 +60,14 @@ const Download = (props: Props) => {
           text={`scoop bucket add versions\nscoop install ferdium-nightly`}
         />
         <CodeBlockSection
+            title='Chocolatey (Windows)'
+            text={`choco install ferdium --pre`}
+        />
+        <CodeBlockSection
+            title='Winget (Windows)'
+            text={`winget install ferdium`}
+        />
+        <CodeBlockSection
           title='Snap (Ubuntu linux and derivatives)'
           text={`snap install --edge ferdium\nsnap connect ferdium:camera\nsnap connect ferdium:audio-record`}
         />
