@@ -57,33 +57,43 @@ function FAQ({}: Props) {
         </FAQEntry>
         <FAQEntry title="Which asset should I download?">
           <>
+          All the assets are named under the following convention:
+          `Ferdium-&lt;target_os&gt;[-&lt;os_option&gt;]-&lt;version_with_channel&gt;[-&lt;target_arch&gt;].&lt;extension&gt;`.
+          More precisely for the different OS, you should choose the file appropriately as follows:
             <details>
               <summary>For MacOS:</summary>
               You first need to know if you are using a computer running one of the intel chip or
               one of the more recent arm chip (developed only by Apple and called M1 or M2). If you
               do not know it, check the value in `Menu-&gt;About this Mac`. If you have an arm chip
               you need to look for the assets that contain `arm64` in their name.
-              There are then two choices: the first one is to download the appropriate file finishing
-              with `-mac.zip` which will unzip to give you the application directly; while the second
-              choice is to get the `.dmg` which will mount and allow you to drag the application into
-              your `Applications` folder. Both options are valid (though using the dmg is recommended)
-              as long as you make sure to take the asset corresponding to your processor.
+              There are then two choices: the first one is to download the appropriate file named
+              `Ferdium-mac-bundle-6.x.x*.zip` which will unzip to give you the application directly;
+              whilst the second choice is to get the file `Ferdium-mac-6.x.x*.dmg` which will mount and
+              allow you to drag the application into your `Applications` folder. Both options are
+              valid (though using the dmg is recommended) as long as you make sure to take the
+              asset corresponding to your processor.
             </details>
             <br/>
             <details>
               <summary>For Windows:</summary>
               There are 3 types of assets that can be downloaded to get Ferdium on Windows:
               <ol>
-                <li>The automatic installer (recommended): the asset named `Ferdium-Setup-6.x.x-*.exe`.
+                <li>The automatic installer (recommended): the asset named `Ferdium-win-AutoSetup-6.x.x-*.exe`.
+                  This installer is appropriate for all architectures (x64, arm64 and x86).
                   After launching the executable, this will install Ferdium and all its configuration
                   into the AppData\Local folder without prompt.</li>
-                <li>The msi installer: named `Ferdium-6.x.x-*.msi`, this installer allows for a few
-                  additional options when installing the app compared to the automatic installer. If
-                  you are still running on a 32bit system, you need to choose the one that contains
-                  `ia32` in its name.</li>
-                <li>The portable version: corresponds to the asset named `Ferdium-6.x.x-*.exe`.
+                <li>The msi installer: named `Ferdium-win-Installer-6.x.x-*.msi`, this installer
+                  allows for a few additional options when installing the app compared to the automatic
+                  installer. Since it depends on the architecture you are running, you must take the
+                  one corresponding to your processor type, by selecting the one whose name finishes
+                  with `-ia32.msi` if you are still running on a 32bit system; or the one whose name
+                  ends with `-x64` otherwise. Note that if you are running on arm64, it is better for
+                  you to use the AutoSetup.</li>
+                <li>The portable version: corresponds to the asset named `Ferdium-win-Portable-6.x.x*.exe`.
                   This is a standalone application that will create the configuration folder in the
-                  folder where the executable lies instead of storing it into AppData.</li>
+                  folder where the executable lies instead of storing it into AppData. You can either
+                  choose the universal version, or one that corresponds to your architecture (names ending
+                  with `-ia32.exe`, `-x64.exe` or `-arm64.exe`)</li>
               </ol>
             </details>
             <br/>
