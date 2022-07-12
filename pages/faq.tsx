@@ -219,7 +219,7 @@ function FAQ({}: Props) {
         <FAQEntry title='Can I move my data from Ferdi to Ferdium?'>
           <>
             Yes you can! Follow{" "}
-            <ExternalLink href='https://github.com/ferdium/ferdi/blob/main/MIGRATION.md'>
+            <ExternalLink href='https://github.com/ferdium/ferdium-app/blob/develop/MIGRATION.md'>
               this
             </ExternalLink>{" "}
             guide.
