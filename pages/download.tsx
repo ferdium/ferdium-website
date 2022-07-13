@@ -1,39 +1,162 @@
-import Button from "components/Button";
+import React, { useEffect, useState } from "react";
 import CodeBlockSection from "components/CodeBlockSection";
-import ExternalLink from "components/ExternalLink";
 import Head from "components/Head";
 import Layout from "components/Layout";
 import Section from "components/Section";
-import React from "react";
-import Link from "components/Link";
 
 import styles from "styles/pages/Download.module.scss";
+import PlatformDownloads from "components/PlatformDownloads";
+
+import linuxLogo from "assets/Tux_Mono.svg";
+import Tabs, { Option } from "components/Tabs";
 
 type Props = {};
 
+type releaseObject = {
+  browser_download_url: string;
+  name: string;
+};
+
 const Download = (props: Props) => {
+  const [latestReleases, setLatestReleases] = useState<Array<releaseObject>>([]);
+  const [currentTab, setCurrentTab] = useState<Option>();
+
+  useEffect(() => {
+    getLatestRelease();
+  }, []);
+
+  const getLatestRelease = async () => {
+    const response = await (
+      await fetch("https://api.github.com/repos/ferdium/ferdium-app/releases?per_page=1")
+    ).json();
+    const filteredResponse = response[0].assets
+      .map((asset: any) => {
+        const castAsset = asset as releaseObject;
+        console.log(response);
+        castAsset.name = castAsset.name
+          .replace(/Ferdium-(linux|mac|win)-/gm, "")
+          .replace(response[0].name, "")
+          .replace(/[-]/g, " ")
+          .replace(/[.]/g, " ")
+          .replace("  ", " ")
+          .trim();
+        return castAsset;
+      })
+      .filter(
+        (asset: releaseObject) => !asset.name.includes("yml") && !asset.name.includes("blockmap")
+      );
+
+    setLatestReleases(filteredResponse);
+  };
+  let links;
+  console.log(currentTab);
+  switch (currentTab?.key) {
+    case "linux":
+      links = (
+        <PlatformDownloads
+          grid
+          gridTemplate='linux'
+          gridTemplateArray={["deb", "rpm", "appimage", "freebsd", "tar"]}
+          downloadTypes={[
+            {
+              title: "DEB",
+              multipleLinks: latestReleases.filter((asset: releaseObject) =>
+                asset.name.includes("deb")
+              ),
+            },
+            {
+              title: "RPM",
+              link: {
+                ...latestReleases.find((asset: releaseObject) => asset.name.includes("rpm")),
+              },
+            },
+            {
+              title: "AppImage",
+              link: {
+                ...latestReleases.find((asset: releaseObject) => asset.name.includes("AppImage")),
+              },
+            },
+            {
+              title: "FreeBSD",
+              link: {
+                ...latestReleases.find((asset: releaseObject) => asset.name.includes("freebsd")),
+              },
+            },
+            {
+              title: "Tar",
+              link: {
+                ...latestReleases.find((asset: releaseObject) => asset.name.includes("tar")),
+              },
+            },
+          ]}
+        />
+      );
+      break;
+    case "win":
+      links = (
+        <PlatformDownloads
+          downloadTypes={[
+            {
+              title: "Installer",
+              multipleLinks: latestReleases
+                .filter(
+                  (asset: releaseObject) =>
+                    asset.name.includes("exe") && !asset.name.includes("Portable")
+                )
+                .reverse(),
+            },
+            {
+              title: "Portable Installer",
+              multipleLinks: latestReleases
+                .filter(
+                  (asset: releaseObject) =>
+                    asset.name.includes("exe") && asset.name.includes("Portable")
+                )
+                .reverse(),
+            },
+          ]}
+        />
+      );
+      break;
+    case "mac":
+      links = (
+        <PlatformDownloads
+          downloadTypes={[
+            {
+              title: "Installer",
+              multipleLinks: latestReleases.filter((asset: releaseObject) =>
+                asset.name.includes("dmg")
+              ),
+            },
+            {
+              title: "Bundle",
+              multipleLinks: latestReleases.filter((asset: releaseObject) =>
+                asset.name.includes("bundle")
+              ),
+            },
+          ]}
+        />
+      );
+      break;
+    default:
+      links = <></>;
+      break;
+  }
+  console.log(currentTab);
   return (
     <Layout>
       <Head title='Ferdium | Download' />
       <Section>
         <h1>Download</h1>
-        <div className={styles.copy}>
-          <p>
-            We&apos;re in the process of getting direct downloads ready, for now you can follow the
-            link below to download the latest nightly release of Ferdium from our GitHub Releases.{" "}
-          </p>
-
-          <p>
-            Once there click &quot;Assets&quot; and choose the version for your platform (check the
-            <Link href='/faq'> FAQ </Link> if you are unsure which one to get)! We currently have
-            releases for macOS, Windows, Linux (AppImage and DEB) and FreeBSD.
-          </p>
-        </div>
-        <ExternalLink href='https://github.com/ferdium/ferdium-app/releases/latest'>
-          <Button cta size='huge'>
-            Download from GitHub
-          </Button>
-        </ExternalLink>
+        <Tabs
+          options={[
+            { title: "Linux", key: "linux" },
+            { title: "Windows", key: "win" },
+            { title: "Mac", key: "mac" },
+          ]}
+          onClick={(option: Option) => setCurrentTab(option)}
+        />
+        {latestReleases && latestReleases.length > 0 && links}
       </Section>
       <Section>
         <h2>Using your OS&apos;s package manager</h2>
@@ -47,10 +170,7 @@ const Download = (props: Props) => {
           title='AUR (Arch Linux and derivatives)'
           text={`yay -S ferdium-bin\n// or, to compile yourself\nyay -S ferdium`}
         />
-        <CodeBlockSection
-          title='Flatpack'
-          text={`flatpak install flathub org.ferdium.Ferdium`}
-        />
+        <CodeBlockSection title='Flatpack' text={`flatpak install flathub org.ferdium.Ferdium`} />
         <CodeBlockSection
           title='Homebrew (macOS)'
           text={`brew tap ferdium/ferdium\nbrew install ferdium-nightly`}
@@ -59,14 +179,8 @@ const Download = (props: Props) => {
           title='Scoop (Windows)'
           text={`scoop bucket add versions\nscoop install ferdium-nightly`}
         />
-        <CodeBlockSection
-            title='Chocolatey (Windows)'
-            text={`choco install ferdium --pre`}
-        />
-        <CodeBlockSection
-            title='Winget (Windows)'
-            text={`winget install ferdium`}
-        />
+        <CodeBlockSection title='Chocolatey (Windows)' text={`choco install ferdium --pre`} />
+        <CodeBlockSection title='Winget (Windows)' text={`winget install ferdium`} />
         <CodeBlockSection
           title='Snap (Ubuntu linux and derivatives)'
           text={`snap install --edge ferdium\nsnap connect ferdium:camera\nsnap connect ferdium:audio-record`}

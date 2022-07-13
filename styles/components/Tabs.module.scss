@@ -1,0 +1,21 @@
+@use "../vars.module.scss";
+
+.tabs {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  border-top-left-radius: calc(vars.$unit * 0.5);
+  border-top-right-radius: calc(vars.$unit * 0.5);
+}
+
+.tab {
+  border: none;
+  background-color: vars.$secondaryColorDark;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+
+.selected {
+  border-bottom: 2px solid vars.$brandColorSecondary;
+}

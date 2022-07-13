@@ -3,7 +3,9 @@ import styles from "styles/components/Button.module.scss";
 type Props = {
   children: ReactNode;
   cta?: boolean;
+  cta2?: boolean;
   size?: string;
+  square?: boolean;
   onClick?: MouseEventHandler;
   icon?: boolean;
   ["aria-label"]?: string;
@@ -12,7 +14,18 @@ type Props = {
 };
 
 const Button = (props: Props) => {
-  let className = props.cta ? styles.cta : styles.base;
+  let className = styles.base;
+
+  if (props.cta) {
+    className = styles.cta;
+  }
+
+  if (props.cta2) {
+    className = styles.ctaSecondary;
+  }
+  if (props.square) {
+    className += ` ${styles.square}`;
+  }
 
   if (props.size) {
     className += ` ${styles[props.size]}`;

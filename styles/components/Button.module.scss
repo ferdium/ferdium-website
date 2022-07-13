@@ -30,6 +30,13 @@
   font-weight: bold;
 }
 
+.ctaSecondary {
+  @extend %button;
+  background: vars.$brandColorSecondary;
+  color: #fff;
+  font-weight: bold;
+}
+
 .large {
   padding: calc(vars.$unit * 1.3) calc(vars.$unit * 2.5);
   border-radius: calc(vars.$unit * 3);
@@ -49,4 +56,7 @@
 }
 .prefix {
   margin-right: calc(vars.$unit * 0.5);
+}
+.square {
+  border-radius: calc(vars.$unit * 0.5);
 }
