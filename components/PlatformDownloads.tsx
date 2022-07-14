@@ -19,7 +19,6 @@ export type Link = {
   browser_download_url?: string;
 };
 const PlatformDownloads = (props: Props) => {
-  console.log(props.downloadTypes);
   return (
     <article className={styles.section}>
       <div
@@ -54,7 +53,7 @@ const PlatformDownloads = (props: Props) => {
           return (
             <section key={type.title} style={{ gridArea: props.gridTemplateArray?.[index] ?? "0" }}>
               <h3>{type.title}</h3>
-              {content}
+              <div className={styles.content}>{content}</div>
             </section>
           );
         })}

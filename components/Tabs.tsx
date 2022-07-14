@@ -2,7 +2,7 @@ import React, { ReactEventHandler, useState } from "react";
 import styles from "styles/components/Tabs.module.scss";
 
 type Props = {
-  currentOption?: Option;
+  value?: string;
   options: Array<Option>;
   onClick?: Function;
 };
@@ -12,17 +12,17 @@ export type Option = {
 };
 const Tabs = (props: Props) => {
   const [selectedOption, setSelectedOption] = useState<Option>();
-  const control = props.currentOption ?? selectedOption;
+  const control = props.value ?? selectedOption?.key;
   return (
     <div className={styles.tabs}>
       {props.options.map((tab: Option) => (
         <Tab
           option={tab}
           key={tab.key}
-          selected={tab.key === control?.key}
+          selected={tab.key === control}
           onClick={() => {
             setSelectedOption(tab);
-            if (props.onClick) props.onClick(tab);
+            if (props.onClick) props.onClick(tab.key);
           }}
         />
       ))}

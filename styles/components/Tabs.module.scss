@@ -10,12 +10,17 @@
 
 .tab {
   border: none;
-  background-color: vars.$secondaryColorDark;
-  color: #fff;
+  background-color: vars.$secondaryColor;
   width: 100%;
   cursor: pointer;
 }
 
 .selected {
   border-bottom: 2px solid vars.$brandColorSecondary;
+}
+[data-theme="dark"] {
+  .tab {
+    background-color: vars.$secondaryColorDark;
+    color: #fff;
+  }
 }

@@ -47,3 +47,11 @@
   grid-template-columns: 33% 33% 33%;
   margin: auto;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
