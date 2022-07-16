@@ -1,4 +1,4 @@
-import React, { ReactEventHandler, useState } from "react";
+import { useState } from "react";
 import styles from "styles/components/Tabs.module.scss";
 
 type Props = {
