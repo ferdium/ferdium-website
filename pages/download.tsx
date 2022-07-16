@@ -7,12 +7,12 @@ import Section from "components/Section";
 import styles from "styles/pages/Download.module.scss";
 import PlatformDownloads from "components/PlatformDownloads";
 
-import linuxLogo from "assets/Tux_Mono.svg";
 import Tabs from "components/Tabs";
 import ExternalLink from "components/ExternalLink";
 import Button from "components/Button";
 import Loader from "components/Loader";
-
+import { Octokit } from "@octokit/rest";
+const octokit = new Octokit();
 type Props = {};
 
 type releaseObject = {
@@ -32,38 +32,40 @@ const Download = (props: Props) => {
 
   const getLatestBetaRelease = async (page: number = 1): Promise<any> => {
     const cache = JSON.parse(localStorage.getItem("cachedRelease") ?? "{}");
+
+    // If we have a cached release and it hasn't expired, use it.
     if (cache.cacheExpires && parseInt(cache.cacheExpires) > new Date().getTime()) {
       return cache.release;
     }
-    const response = await (
-      await fetch(`https://api.github.com/repos/ferdium/ferdium-app/releases?per_page=${page}`)
-    ).json();
-    const release = response.find((release: any) => release.name.includes("beta"));
+
+    const response = await octokit.rest.repos.listReleases({
+      owner: "ferdium",
+      repo: "ferdium-app",
+      page: page,
+    });
+
+    const release = response.data.find((release: any) => release.name.includes("beta"));
+
     if (!release) {
       return await getLatestBetaRelease(page + 1);
     }
+
+    // Cache the latest result to prevent getting rate-limited by the GitHub API
     localStorage.setItem(
       "cachedRelease",
       JSON.stringify({
+        // Cache is valid for 10 min
         cacheExpires: new Date().getTime() + 10 * 60000,
         release,
       })
     );
+
     return release;
   };
   const getLatestRelease = async () => {
     if (isGettingRelease) return;
     setIsGettingRelease(true);
     const release = await getLatestBetaRelease();
-    /*  
-
-   This can be used if we split betas and nightlies into a new repo. 
-
-   const response = await (
-      await fetch("https://api.github.com/repos/ferdium/ferdium-app/releases?per_page=1")
-    ).json();
-    const release = response[0]; 
-    */
 
     const filteredResponse = release.assets
       .map((asset: any) => {
