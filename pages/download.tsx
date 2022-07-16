@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CodeBlockSection from "components/CodeBlockSection";
 import Head from "components/Head";
 import Layout from "components/Layout";
@@ -11,7 +11,9 @@ import Tabs from "components/Tabs";
 import ExternalLink from "components/ExternalLink";
 import Button from "components/Button";
 import Loader from "components/Loader";
+import Link from "next/link";
 import { Octokit } from "@octokit/rest";
+
 const octokit = new Octokit();
 type Props = {};
 
@@ -25,6 +27,7 @@ const Download = (props: Props) => {
   const [currentTab, setCurrentTab] = useState<string>();
   const [primaryDownloadUrl, setPrimaryDownloadUrl] = useState<releaseObject>();
   const [isGettingRelease, setIsGettingRelease] = useState(false);
+  const [fallback, setFallback] = useState(false);
 
   useEffect(() => {
     getLatestRelease();
@@ -38,13 +41,22 @@ const Download = (props: Props) => {
       return cache.release;
     }
 
-    const response = await octokit.rest.repos.listReleases({
-      owner: "ferdium",
-      repo: "ferdium-app",
-      page: page,
-    });
+    let response;
 
-    const release = response.data.find((release: any) => release.name.includes("beta"));
+    try {
+      response = await octokit.rest.repos.listReleases({
+        owner: "ferdium",
+        repo: "ferdium-app",
+        page: page,
+      });
+    } catch (e: any) {
+      setFallback(true);
+      return;
+    }
+
+    const release = response.data.find(
+      (release) => release && release.name && release.name.includes("beta")
+    );
 
     if (!release) {
       return await getLatestBetaRelease(page + 1);
@@ -67,6 +79,11 @@ const Download = (props: Props) => {
     setIsGettingRelease(true);
     const release = await getLatestBetaRelease();
 
+    if (!release) {
+      setFallback(true);
+      return;
+    }
+
     const filteredResponse = release.assets
       .map((asset: any) => {
         const castAsset = asset as releaseObject;
@@ -78,14 +95,14 @@ const Download = (props: Props) => {
           .replace(/[.]/g, " ")
           .replace("  ", " ")
           .trim();
+
         return castAsset;
       })
       .filter(
         (asset: releaseObject) => !asset.name.includes("yml") && !asset.name.includes("blockmap")
       );
 
-    // this is a bit of a mess
-    const userOS = navigator.userAgent.split("(")[1].split(")")[0].toLowerCase();
+    const userOS = navigator.userAgent.match(/Mac|Win|Linux/g)?.[0].toLowerCase() || "win";
     switch (true) {
       case userOS.includes("linux"):
         setCurrentTab("linux");
@@ -215,33 +232,64 @@ const Download = (props: Props) => {
   return (
     <Layout>
       <Head title='Ferdium | Download' />
-      <Section>
-        <h1>Download</h1>
-        <p className={styles.copy}>Find the installer for your OS below to install Ferdium!</p>
-        {!primaryDownloadUrl || isGettingRelease ? (
-          <Loader />
-        ) : (
-          <ExternalLink href={primaryDownloadUrl?.browser_download_url}>
+      {fallback && (
+        <Section>
+          <h1>Download</h1>
+          <div className={styles.copy}>
+            <p>
+              Something went wrong when getting the links to the latest Ferdium release. Try again
+              later or follow the link below to download the latest nightly release of Ferdium from
+              our GitHub Releases.{" "}
+            </p>
+
+            <p>
+              Once there click &quot;Assets&quot; and choose the version for your platform (check
+              the
+              <Link href='/faq'> FAQ </Link> if you are unsure which one to get)! We currently have
+              releases for macOS, Windows, Linux (AppImage and DEB) and FreeBSD.
+            </p>
+          </div>
+          <ExternalLink href='https://github.com/ferdium/ferdium-app/releases/latest'>
             <Button cta size='huge'>
-              Download
+              Download from GitHub
             </Button>
           </ExternalLink>
-        )}
-        <p style={{ fontSize: "0.5rem" }}>{primaryDownloadUrl?.name}</p>
-      </Section>
-      <Section>
-        <h2>Alternative Downloads</h2>
-        <Tabs
-          options={[
-            { title: "Linux", key: "linux" },
-            { title: "Windows", key: "win" },
-            { title: "Mac", key: "mac" },
-          ]}
-          onClick={(key: string) => setCurrentTab(key)}
-          value={currentTab}
-        />
-        {!latestReleases || latestReleases.length <= 0 || isGettingRelease ? <Loader /> : links}
-      </Section>
+        </Section>
+      )}
+
+      {!fallback && (
+        <>
+          <Section>
+            <h1>Download</h1>
+            <p className={styles.copy}>Find the installer for your OS below to install Ferdium!</p>
+            {!primaryDownloadUrl || isGettingRelease ? (
+              <Loader />
+            ) : (
+              <ExternalLink href={primaryDownloadUrl?.browser_download_url}>
+                <Button cta size='huge'>
+                  Download
+                </Button>
+              </ExternalLink>
+            )}
+            <p style={{ fontSize: "0.5rem" }}>{primaryDownloadUrl?.name}</p>
+          </Section>
+          {latestReleases && latestReleases.length > 0 && !isGettingRelease && (
+            <Section>
+              <h2>Alternative Downloads</h2>
+              <Tabs
+                options={[
+                  { title: "Linux", key: "linux" },
+                  { title: "Windows", key: "win" },
+                  { title: "Mac", key: "mac" },
+                ]}
+                onClick={(key: string) => setCurrentTab(key)}
+                value={currentTab}
+              />
+              {links}
+            </Section>
+          )}
+        </>
+      )}
       <Section>
         <h2>Using your OS&apos;s package manager</h2>
         <p className={styles.copy}>
