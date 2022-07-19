@@ -81,6 +81,7 @@ const Download = (props: Props) => {
 
     if (!release) {
       setFallback(true);
+      setIsGettingRelease(false);
       return;
     }
 
