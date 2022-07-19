@@ -76,25 +76,22 @@ function FAQ({}: Props) {
             <br/>
             <details>
               <summary>For Windows:</summary>
-              There are 3 types of assets that can be downloaded to get Ferdium on Windows:
+              There are 2 types of assets that can be downloaded to get Ferdium on Windows:
               <ol>
-                <li>The automatic installer (recommended): the asset named `Ferdium-win-AutoSetup-6.x.x-*.exe`.
-                  This installer is appropriate for all architectures (x64, arm64 and x86).
-                  After launching the executable, this will install Ferdium and all its configuration
-                  into the AppData\Local folder without prompt.</li>
-                <li>The msi installer: named `Ferdium-win-Installer-6.x.x-*.msi`, this installer
-                  allows for a few additional options when installing the app compared to the automatic
-                  installer. Since it depends on the architecture you are running, you must take the
-                  one corresponding to your processor type, by selecting the one whose name finishes
-                  with `-ia32.msi` if you are still running on a 32bit system; or the one whose name
-                  ends with `-x64` otherwise. Note that if you are running on arm64, it is better for
-                  you to use the AutoSetup.</li>
+                <li>The automatic installer (recommended): assets named `Ferdium-win-AutoSetup-6.x.x*.exe`.
+                  These executables will install Ferdium and all its configuration into the AppData\Local
+                  folder without prompt. </li>
                 <li>The portable version: corresponds to the asset named `Ferdium-win-Portable-6.x.x*.exe`.
                   This is a standalone application that will create the configuration folder in the
-                  folder where the executable lies instead of storing it into AppData. You can either
-                  choose the universal version, or one that corresponds to your architecture (names ending
-                  with `-ia32.exe`, `-x64.exe` or `-arm64.exe`)</li>
+                  folder where the executable lies instead of storing it into AppData. </li>
               </ol>
+              For both of these, there are assets corresponding to the specific architectures (names ending
+              with `-ia32.exe` for 32bits, `-x64.exe` for 64bits, or `-arm64.exe` for arm) which only contain the
+              given architecture. If you are unsure which one is best for you, you can download the universal
+              version (the asset name which does not include architecture tag between the version and `.exe`).
+              This executable includes everything to run on all architectures, which means it will be heavier,
+              but will always work as expected. If you are running the installer, it will install only for the
+              correct architecture, and you will be able to delete the installer file afterwards.
             </details>
             <br/>
             <details>
@@ -109,6 +106,24 @@ function FAQ({}: Props) {
             For any developer that wants to build from source, the code is also directly available for
             each release the app can be built simply by running the appropriate scripts found in the
             `script` folder (assuming that the environment has been set up correctly).
+          </>
+        </FAQEntry>
+        <FAQEntry title="Can I run the beta/nightly version alongside the stable one?">
+          <>
+            In short, no! This is due to the fact that the executables have the same name and are
+            installed in the same place, which means that when you install a version it will write
+            over the previously installed one, whichever it was previously. This means that you can
+            upgrade, downgrade, change the channel you are on by simply installing the version you
+            want; but you cannot have the stable release and a development release installed at the
+            same time.
+          </>
+        </FAQEntry>
+        <FAQEntry title="Will I lose my configuration by installing a different release?">
+          <>
+            When you install a release, the configuration folder will not be modified. You can then
+            safely install a nightly/beta version to test them and then install the stable, or the
+            other way around, and all your services and settings will come with you. (Notice that you
+            cannot have multiple releases installed as explained above.)
           </>
         </FAQEntry>
         <FAQEntry title="I can't find the menu bar anymore">
@@ -204,7 +219,7 @@ function FAQ({}: Props) {
         <FAQEntry title='Can I move my data from Ferdi to Ferdium?'>
           <>
             Yes you can! Follow{" "}
-            <ExternalLink href='https://github.com/ferdium/ferdi/blob/main/MIGRATION.md'>
+            <ExternalLink href='https://github.com/ferdium/ferdium-app/blob/develop/MIGRATION.md'>
               this
             </ExternalLink>{" "}
             guide.

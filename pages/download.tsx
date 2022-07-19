@@ -302,7 +302,7 @@ const Download = (props: Props) => {
           title='AUR (Arch Linux and derivatives)'
           text={`yay -S ferdium-bin\n// or, to compile yourself\nyay -S ferdium`}
         />
-        <CodeBlockSection title='Flatpack' text={`flatpak install flathub org.ferdium.Ferdium`} />
+        <CodeBlockSection title='Flatpak' text={`flatpak install flathub org.ferdium.Ferdium`} />
         <CodeBlockSection
           title='Homebrew (macOS)'
           text={`brew tap ferdium/ferdium\nbrew install ferdium-nightly`}
@@ -311,8 +311,15 @@ const Download = (props: Props) => {
           title='Scoop (Windows)'
           text={`scoop bucket add versions\nscoop install ferdium-nightly`}
         />
-        <CodeBlockSection title='Chocolatey (Windows)' text={`choco install ferdium --pre`} />
-        <CodeBlockSection title='Winget (Windows)' text={`winget install ferdium`} />
+
+        <CodeBlockSection
+            title='Chocolatey (Windows)'
+            text={`choco install ferdium --pre`}
+        />
+        <CodeBlockSection
+            title='Winget (Windows)'
+            text={`# to install Beta pre-releases:\nwinget install ferdium-beta\n# for nightly pre-releases:\nwinget install ferdium-nightly`}
+        />
         <CodeBlockSection
           title='Snap (Ubuntu linux and derivatives)'
           text={`snap install --edge ferdium\nsnap connect ferdium:camera\nsnap connect ferdium:audio-record`}
