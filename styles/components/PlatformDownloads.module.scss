@@ -1,0 +1,57 @@
+@use "../vars.module.scss";
+
+.platformLogo {
+  max-width: 100px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #505050;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: calc(vars.$unit * 2) 0;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  & > section {
+    min-width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & button {
+    min-width: 165px;
+  }
+}
+.link {
+  &:not(:first-child) {
+    margin-top: vars.$unit;
+  }
+}
+
+.linux {
+  grid-template-areas:
+    "deb rpm appimage"
+    "deb freebsd tar";
+  width: 100%;
+  grid-template-columns: 33% 33% 33%;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
