@@ -320,7 +320,7 @@ const Download = (props: Props) => {
         />
         <CodeBlockSection
             title='Winget (Windows)'
-            text={`# to install Beta pre-releases:\nwinget install ferdium-beta\n# for nightly pre-releases:\nwinget install ferdium-nightly`}
+            text={`# to install the last stable release:\nwinget install ferdium\n# or for Beta pre-releases:\nwinget install ferdium-beta\n# or for nightly pre-releases:\nwinget install ferdium-nightly`}
         />
         <CodeBlockSection
           title='Snap (Ubuntu linux and derivatives)'
