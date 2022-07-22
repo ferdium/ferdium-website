@@ -33,7 +33,8 @@ const Download = (props: Props) => {
     getLatestRelease();
   }, []);
 
-  const getLatestBetaRelease = async (page: number = 1): Promise<any> => {
+  // TODO: Make general function to fetch for either stable, beta or nightly
+  const getLatestStableRelease = async (page: number = 1): Promise<any> => {
     const cache = JSON.parse(localStorage.getItem("cachedRelease") ?? "{}");
 
     // If we have a cached release and it hasn't expired, use it.
@@ -55,11 +56,11 @@ const Download = (props: Props) => {
     }
 
     const release = response.data.find(
-      (release) => release && release.name && release.name.includes("beta")
+      (release) => release && !release.draft && !release.prerelease
     );
 
     if (!release) {
-      return await getLatestBetaRelease(page + 1);
+      return await getLatestStableRelease(page + 1);
     }
 
     // Cache the latest result to prevent getting rate-limited by the GitHub API
@@ -77,7 +78,7 @@ const Download = (props: Props) => {
   const getLatestRelease = async () => {
     if (isGettingRelease) return;
     setIsGettingRelease(true);
-    const release = await getLatestBetaRelease();
+    const release = await getLatestStableRelease();
 
     if (!release) {
       setFallback(true);
@@ -319,7 +320,7 @@ const Download = (props: Props) => {
         />
         <CodeBlockSection
             title='Winget (Windows)'
-            text={`# to install Beta pre-releases:\nwinget install ferdium-beta\n# for nightly pre-releases:\nwinget install ferdium-nightly`}
+            text={`# to install the last stable release:\nwinget install ferdium\n# or for Beta pre-releases:\nwinget install ferdium-beta\n# or for nightly pre-releases:\nwinget install ferdium-nightly`}
         />
         <CodeBlockSection
           title='Snap (Ubuntu linux and derivatives)'
