@@ -307,16 +307,16 @@ const Download = (props: Props) => {
         <CodeBlockSection title='Flatpak' text={`flatpak install flathub org.ferdium.Ferdium`} />
         <CodeBlockSection
           title='Homebrew (macOS)'
-          text={`brew tap ferdium/ferdium\nbrew install ferdium`}
+          text={`brew tap ferdium/ferdium\n# to install the last stable release:\nbrew install ferdium\n# or for Beta pre-releases:\nbrew install ferdium-beta\n# or for nightly pre-releases:\nbrew install ferdium-nightly`}
         />
         <CodeBlockSection
           title='Scoop (Windows)'
-          text={`scoop bucket add versions\nscoop install ferdium-nightly`}
+          text={`scoop bucket add versions\n# to install the last stable release:\nscoop install ferdium\n# or for nightly pre-releases:\nscoop install ferdium-nightly`}
         />
 
         <CodeBlockSection
             title='Chocolatey (Windows)'
-            text={`choco install ferdium --pre`}
+            text={`# to install the last stable release:\nchoco install ferdium --pre\n# or for nightly pre-releases:\nchoco install ferdium --pre`}
         />
         <CodeBlockSection
             title='Winget (Windows)'
