@@ -30,7 +30,7 @@ const Contact = (props: Props) => {
             <a href='https://github.com/ferdium/ferdium-app/issues'>GitHub bug tracker</a>. When
             doing so, be sure to follow the guidelines in the description of the new issue when
             creating it. In case of any questions, come and chat in{" "}
-            <a href='https://discord.gg/xqA9vTP6'>Discord</a> and we&apos;ll gladly help you.
+            <a href='https://discord.gg/jVv4Qns8pP'>Discord</a> and we&apos;ll gladly help you.
           </p>
           <p>
             If you wish to participate in the Ferdium project, you are always welcome to join. We
