@@ -225,6 +225,13 @@ function FAQ({}: Props) {
             guide.
           </>
         </FAQEntry>
+        <FAQEntry title='Where can I find the Ferdium profile folder on my local machine?'>
+          <>
+            Windows: %APPDATA%/Ferdium
+            Mac: ~/Library/Application\ Support/Ferdium
+            Linux: ~/.config/Ferdium/
+          </>
+        </FAQEntry>
         <FAQEntry title='My Discord service is not showing properly. What should I do?'>
           <>
             This is because of the User Agent within the service. Discord thinks you are on a mobile
