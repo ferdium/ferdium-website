@@ -247,7 +247,7 @@ function FAQ({}: Props) {
         </FAQEntry>
         <FAQEntry title='Can multiple services use the same profile such that login information is shared amongst them?'>
           <>
-            No, this is not planned in Ferdium since that can open the pandora's box related to session hijacking.
+            No, this is not planned in Ferdium since that can open the pandora&apos;s box related to session hijacking.
           </>
         </FAQEntry>
       </Section>
