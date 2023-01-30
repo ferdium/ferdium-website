@@ -15,9 +15,12 @@ jobs:
 
       - uses: actions/checkout@v2
 
-      - uses: sterlingwes/gh-pages-deploy-action@v1.1
+      - name: Install and Build 🔧
+        run: |
+          pnpm i
+          pnpm run export
+
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          source-directory: out
-          build-command: pnpm run export
-          deploy-branch: gh-pages
+          folder: out
+          branch: gh-pages
