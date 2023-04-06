@@ -22,7 +22,7 @@ const Contact = (props: Props) => {
             Ferdium, like any open source project, is maintained by a bunch of volunteers. If you
             are having some issues with the software, you can always try to contact the team. The
             easiest way to do this, is by{" "}
-            <a href='https://discord.gg/xqA9vTP6'>joining our Discord server</a>.
+            <a href='https://discord.com/invite/jVv4Qns8pP'>joining our Discord server</a>.
           </p>
           <p>
             If you have found a bug in the Ferdium application itself, or have an idea for a
@@ -39,10 +39,6 @@ const Contact = (props: Props) => {
             free to create a{" "}
             <a href='https://github.com/ferdium/ferdium-app/pulls'>pull request on GitHub</a> and we
             will evaluate it.
-          </p>
-          <p>
-            You can also contact us at <a href='mailto:contact@ferdium.org'>contact@ferdium.org</a>{" "}
-            for matters related to privacy or that requires direct contact.
           </p>
         </div>
       </Section>
