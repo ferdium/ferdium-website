@@ -7,16 +7,17 @@ on:
 jobs:
   check-next-website:
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [16.x]
 
     steps:
-      - uses: pnpm/action-setup@v2.1.0
+      - name: Use Node.js specified in the '.nvmrc' file
+        uses: actions/setup-node@v3
         with:
-          version: 7.1.0
+          node-version-file: ".nvmrc"
 
-      - uses: actions/checkout@v2
+      - name: Install pnpm
+        run: npm i -gf "pnpm@$(node -p 'require("./package.json").engines.pnpm')" && pnpm -v
+
+      - uses: actions/checkout@v3
 
       - run: pnpm install
 

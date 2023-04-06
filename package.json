@@ -2,6 +2,9 @@
   "name": "ferdium-website",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "pnpm": "7.1.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,9 +15,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdi/js": "^6.6.96",
-    "@mdi/react": "^1.6.0",
-    "@octokit/rest": "^19.0.3",
+    "@mdi/js": "6.6.96",
+    "@mdi/react": "1.6.0",
+    "@octokit/rest": "19.0.3",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0"
@@ -25,8 +28,8 @@
     "@types/react-dom": "18.0.2",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
-    "next-sitemap": "^2.5.20",
-    "sass": "^1.50.1",
+    "next-sitemap": "2.5.20",
+    "sass": "1.50.1",
     "typescript": "4.6.3"
   }
 }
