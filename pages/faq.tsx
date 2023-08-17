@@ -156,7 +156,7 @@ function FAQ({}: Props) {
             </ExternalLink>{" "}
             which allows you to create your own account. If you chose the accountless option when signing
             up in Ferdium for the first time, you can follow{" "}
-            <ExternalLink href='https://github.com/ferdium/ferdium-app/blob/develop/INTERNAL_SERVER.md#exporting-backups'>
+            <ExternalLink href='https://github.com/ferdium/ferdium-app/blob/develop/docs/INTERNAL_SERVER.md#exporting-backups'>
               these steps
             </ExternalLink>{" "}
             to create backups manually.
@@ -219,7 +219,7 @@ function FAQ({}: Props) {
         <FAQEntry title='Can I move my data from Ferdi to Ferdium?'>
           <>
             Yes you can! Follow{" "}
-            <ExternalLink href='https://github.com/ferdium/ferdium-app/blob/develop/MIGRATION.md'>
+            <ExternalLink href='https://github.com/ferdium/ferdium-app/blob/develop/docs/MIGRATION.md'>
               this
             </ExternalLink>{" "}
             guide.
