@@ -6,11 +6,14 @@ type Props = { children: ReactNode; href: string; ["aria-label"]?: string; neutr
 
 const Link = (props: Props) => {
   return (
-    <NextLink href={props.href}>
-      <a aria-label={props["aria-label"]} className={props.neutral ? styles.neutral : undefined}>
-        {props.children}
-      </a>
-    </NextLink>
+    (<NextLink
+      href={props.href}
+      aria-label={props["aria-label"]}
+      className={props.neutral ? styles.neutral : undefined}>
+
+      {props.children}
+
+    </NextLink>)
   );
 };
 
