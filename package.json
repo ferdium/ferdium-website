@@ -19,16 +19,16 @@
     "@mdi/js": "6.6.96",
     "@mdi/react": "1.6.0",
     "@octokit/rest": "19.0.3",
-    "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "next": "13.5.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.27",
     "@types/react": "18.0.6",
     "@types/react-dom": "18.0.2",
     "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5",
+    "eslint-config-next": "13.5.2",
     "next-sitemap": "2.5.20",
     "sass": "1.50.1",
     "typescript": "4.6.3"
