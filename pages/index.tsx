@@ -26,7 +26,8 @@ const Home: NextPage = () => {
           <h2>Services</h2>
           <p>
             Add all your services in one place for quick and easy access and never search your tabs
-            or bookmarks again!
+            or bookmarks again! You can also add the same service twice or more to be able to login
+            into multiple accounts!
           </p>
         </div>
         <div className={styles.image}>
