@@ -260,23 +260,9 @@ const Download = (props: Props) => {
           <div className={styles.copy}>
             <p>
               Something went wrong when getting the links to the latest Ferdium
-              release. Try again later or follow the link below to download the
-              latest nightly release of Ferdium from our GitHub Releases.{" "}
-            </p>
-
-            <p>
-              Once there click &quot;Assets&quot; and choose the version for
-              your platform (check the
-              <Link href="/faq"> FAQ </Link> if you are unsure which one to
-              get)! We currently have releases for macOS, Windows, Linux
-              (AppImage and DEB) and FreeBSD.
+              release. Try again later!{" "}
             </p>
           </div>
-          <ExternalLink href="https://github.com/ferdium/ferdium-app/releases/latest">
-            <Button cta size="huge">
-              Download from GitHub
-            </Button>
-          </ExternalLink>
         </Section>
       )}
 
@@ -297,6 +283,27 @@ const Download = (props: Props) => {
               </ExternalLink>
             )}
             <p style={{ fontSize: "0.5rem" }}>{primaryDownloadUrl?.name}</p>
+          </Section>
+          <Section>
+            <div className={styles.copy}>
+              <p>
+                Follow the link below to download the latest nightly release
+                of Ferdium from our GitHub Releases.{" "}
+              </p>
+
+              <p>
+                Once there click &quot;Assets&quot; and choose the version for
+                your platform (check the
+                <Link href="/faq"> FAQ </Link> if you are unsure which one to
+                get)! We currently have releases for macOS, Windows, Linux
+                (AppImage and DEB) and FreeBSD.
+              </p>
+            </div>
+            <ExternalLink href="https://github.com/ferdium/ferdium-app/releases">
+              <Button cta size="huge">
+                Download from GitHub
+              </Button>
+            </ExternalLink>
           </Section>
           {latestReleases && latestReleases.length > 0 && !isGettingRelease && (
             <Section>
