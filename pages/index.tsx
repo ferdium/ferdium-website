@@ -34,6 +34,8 @@ const Home: NextPage = () => {
           <NonOptimizedImage
             src={General}
             alt='The Ferdium app displaying web services as icons on a sidebar to the left.'
+            layout="responsive"
+            
           />
         </div>
       </Section>
@@ -42,6 +44,8 @@ const Home: NextPage = () => {
           <NonOptimizedImage
             src={Work}
             alt='A drawer menu has opened on the left side of the app revealing the option tho choose between workspaces'
+            layout="responsive"
+            
           />
         </div>
         <div className={styles.description}>
