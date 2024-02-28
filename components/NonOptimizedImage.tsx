@@ -11,8 +11,9 @@ type Props = {
   alt: string;
   width?: number;
   height?: number;
+  layout?:string;
 };
 
 export default function NonOptimizedImage(props: Props) {
-  return <NextImage {...props} loader={customLoader} unoptimized={!props.width && !props.height} />;
+  return <NextImage {...props} loader={customLoader} unoptimized={!props.width && !props.height} layout={props.layout}  />;
 }
