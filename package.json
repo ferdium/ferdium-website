@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "20.12.0",
-    "pnpm": "8.15.5"
+    "node": "20.15.0",
+    "pnpm": "9.4.0"
   },
   "volta": {
-    "node": "20.12.0",
-    "pnpm": "8.15.5"
+    "node": "20.15.0",
+    "pnpm": "9.4.0"
   },
   "scripts": {
     "dev": "next dev",
@@ -20,21 +20,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdi/js": "6.6.96",
+    "@mdi/js": "6.9.96",
     "@mdi/react": "1.6.1",
-    "@octokit/rest": "20.0.2",
+    "@octokit/rest": "21.0.0",
     "next": "13.5.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@types/node": "20.12.2",
-    "@types/react": "18.2.73",
-    "@types/react-dom": "18.2.23",
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
     "eslint": "8.56.0",
     "eslint-config-next": "13.5.6",
     "next-sitemap": "4.2.3",
-    "sass": "1.71.1",
-    "typescript": "5.3.3"
+    "sass": "1.77.6",
+    "typescript": "5.4.5"
   }
 }
