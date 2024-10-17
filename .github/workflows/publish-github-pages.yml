@@ -10,20 +10,22 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-
       - name: Use Node.js specified in the '.nvmrc' file
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
-
+          node-version-file: '.nvmrc'
       - name: Install pnpm
-        run: npm i -gf "pnpm@$(node -p 'require("./package.json").engines.pnpm')" && pnpm -v
-
-      - name: Install and Build 🔧
+        uses: pnpm/action-setup@v4
+      - name: Install node dependencies recursively
+        uses: nick-fields/retry@v3
+        with:
+          command: pnpm i
+          timeout_minutes: 15
+          max_attempts: 3
+          retry_on: error
+      - name: Build 🔧
         run: |
-          pnpm i
           pnpm run export
-
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
