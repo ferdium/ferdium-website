@@ -4,14 +4,14 @@
   "private": true,
   "engines": {
     "node": "20.18.0",
-    "pnpm": "9.12.2"
+    "pnpm": "9.12.3"
   },
   "engine-strict": true,
   "volta": {
     "node": "20.18.0",
-    "pnpm": "9.12.2"
+    "pnpm": "9.12.3"
   },
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@types/node": "20.14.10",
-    "@types/react": "18.3.11",
+    "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "eslint": "8.56.0",
     "eslint-config-next": "13.5.6",
