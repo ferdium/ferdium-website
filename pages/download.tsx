@@ -364,6 +364,10 @@ const Download = (props: Props) => {
           title="Snap (Ubuntu linux and derivatives)"
           text={`# to install the latest stable release:\nsnap install ferdium\n# or for beta pre-releases:\nsnap install ferdium --beta\n# or for nightly pre-releases:\nsnap install ferdium --edge\n# connect additional interfaces:\nsnap connect ferdium:camera\nsnap connect ferdium:audio-record`}
         />
+        <CodeBlockSection
+            title="Snap (Ubuntu linux and derivatives alternative package manager)"
+            text={`pacstall -I ferdium-deb`}
+        />
       </Section>
     </Layout>
   );
