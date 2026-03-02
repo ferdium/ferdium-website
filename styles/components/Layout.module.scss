@@ -1,1 +1,21 @@
 @use "../vars.module.scss";
+
+.banner {
+  background-color: #fff3cd; /* light yellow */
+  color: #856404; /* dark yellow/brown */
+  text-align: center;
+  padding: calc(vars.$unit * 0.75);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.banner a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* dark mode banner colors */
+[data-theme="dark"] .banner {
+  background-color: #444027;
+  color: #ffeb3b;
+}
