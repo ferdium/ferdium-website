@@ -8,6 +8,13 @@ type Props = { children: ReactNode };
 const Layout = (props: Props) => {
   return (
     <>
+      <div className={styles.banner} role="alert">
+        ⚠️ The only official domain for Ferdium is {" "}
+        <a href="https://ferdium.org" target="_blank" rel="noopener noreferrer">
+          https://ferdium.org
+        </a>.
+        Any other site impersonating Ferdium is fraudulent and may host or distribute malware.
+      </div>
       <Header />
       <main id={styles.main}>{props.children}</main>
       <Footer />
