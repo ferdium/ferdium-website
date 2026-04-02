@@ -11,7 +11,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <>
+    <div className={styles.heroContainer}>
       <div id={styles.backgroundWrapper}>
         <Background />
       </div>
@@ -26,7 +26,7 @@ const Hero = (props: Props) => {
         </h2>
         <CommunityLinks services={["discord", "github", "reddit"]} />
       </Section>
-    </>
+    </div>
   );
 };
 

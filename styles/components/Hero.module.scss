@@ -1,8 +1,18 @@
 @use "../vars.module.scss";
 
-#backgroundWrapper {
+.heroContainer {
   position: relative;
   width: 100%;
+}
+
+#backgroundWrapper {
+  position: absolute;
+  top: -74px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 74px);
+  z-index: 0;
+  overflow: hidden;
   display: flex;
   justify-content: center;
 }
