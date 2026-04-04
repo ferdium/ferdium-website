@@ -32,12 +32,23 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Alesdosh",
+      "name": "Ales",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160426783?v=4",
+      "profile": "https://github.com/Alesdosh",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "website",
+  "projectName": "ferdium-website",
   "projectOwner": "ferdium",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitType": "docs",
+  "commitConvention": "angular"
 }
